@@ -1,0 +1,2 @@
+markdown-include
+https://pypi.org/project/mkdocs-markdownextradata-plugin/
