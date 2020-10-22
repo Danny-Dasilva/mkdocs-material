@@ -472,3 +472,21 @@ This will create the following structure:
 │  └─ index.md
 └─ mkdocs.yml
 ```
+
+
+### Installation
+git clone https://github.com/squidfunk/mkdocs-material.git
+
+
+pip install -r mkdocs-material/requirements.txt
+
+
+
+
+### Previewing as you write¶
+
+MkDocs includes a live preview server, so you can preview your changes as you write your documentation. The server will automatically rebuild the site upon saving. Start it with:
+
+`mkdocs serve`
+
+If you're running Material for MkDocs from within Docker, use:

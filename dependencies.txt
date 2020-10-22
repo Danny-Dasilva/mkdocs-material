@@ -1,2 +1,4 @@
 markdown-include
 https://pypi.org/project/mkdocs-markdownextradata-plugin/
+pip3 install pipenv \n pipenv --python 3.7
+pipenv install
