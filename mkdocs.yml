@@ -6,8 +6,11 @@ theme:
   name: material
   palette:
     scheme: preference
-    primary: teal
+    primary: indigo
     accent: amber
+  toggle:
+    icon: material/toggle-switch
+    name: Switch to light mode
   icon:
     repo: fontawesome/brands/github-alt
   logo: img/icon-white.svg
@@ -72,4 +75,3 @@ extra_javascript:
 - js/termynal.js
 - js/custom.js
 - js/chat.js
-- https://sidecar.gitter.im/dist/sidecar.v1.js
