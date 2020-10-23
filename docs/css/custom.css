@@ -1,0 +1,32 @@
+[data-md-color-scheme="youtube"] {
+  --md-primary-fg-color:        #EE0F0F;
+  --md-primary-fg-color--light: #ECB7B7;
+  --md-primary-fg-color--dark:  #90030C;
+}
+a.external-link::after {
+  /* \00A0 is a non-breaking space
+        to make the mark be on the same line as the link
+    */
+  content: "\00A0[↪]";
+}
+
+a.internal-link::after {
+  /* \00A0 is a non-breaking space
+        to make the mark be on the same line as the link
+    */
+  content: "\00A0↪";
+}
+
+body:not([data-md-prefers-color-scheme="true"])[data-md-color-scheme="slate"] .md-icon .light-mode, body:not([data-md-prefers-color-scheme="true"])[data-md-color-scheme="slate"] .md-icon .system-mode, body:not([data-md-prefers-color-scheme="true"])[data-md-color-scheme="dracula"] .md-icon .unknown-mode {
+	 display: none;
+}
+ body:not([data-md-prefers-color-scheme="true"])[data-md-color-scheme="default"] .md-icon .dark-mode, body:not([data-md-prefers-color-scheme="true"])[data-md-color-scheme="default"] .md-icon .system-mode, body:not([data-md-prefers-color-scheme="true"])[data-md-color-scheme="default"] .md-icon .unknown-mode {
+	 display: none;
+}
+ body:not([data-md-prefers-color-scheme="true"]):not([data-md-color-scheme="default"]):not([data-md-color-scheme="slate"]) .md-icon .dark-mode, body:not([data-md-prefers-color-scheme="true"]):not([data-md-color-scheme="default"]):not([data-md-color-scheme="slate"]) .md-icon .light-mode, body:not([data-md-prefers-color-scheme="true"]):not([data-md-color-scheme="default"]):not([data-md-color-scheme="slate"]) .md-icon .system-mode {
+	 display: none;
+}
+ body[data-md-prefers-color-scheme="true"] .md-icon .dark-mode, body[data-md-prefers-color-scheme="true"] .md-icon .light-mode, body[data-md-prefers-color-scheme="true"] .md-icon .unknown-mode {
+	 display: none;
+}
+ 
