@@ -13,13 +13,13 @@ window.toggleScheme = function() {
     //scheme = "slate"
     //console.log("2")
   //} else if (scheme === "slate") {
-  if (scheme === "slate") {
+  if (scheme === "iceberg") {
     prefer = "false"
     scheme = "default"
     console.log("3")
   } else {
     prefer = "false"
-    scheme = "slate"
+    scheme = "iceberg"
     console.log("4")
   }
   localStorage.setItem("data-md-prefers-color-scheme", prefer)
