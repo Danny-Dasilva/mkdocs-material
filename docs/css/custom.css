@@ -20,13 +20,9 @@ a.internal-link::after {
 body:not([data-md-prefers-color-scheme="true"])[data-md-color-scheme="slate"] .md-icon .light-mode, body:not([data-md-prefers-color-scheme="true"])[data-md-color-scheme="slate"] .md-icon .system-mode, body:not([data-md-prefers-color-scheme="true"])[data-md-color-scheme="dracula"] .md-icon .unknown-mode {
 	 display: none;
 }
- body:not([data-md-prefers-color-scheme="true"])[data-md-color-scheme="default"] .md-icon .dark-mode, body:not([data-md-prefers-color-scheme="true"])[data-md-color-scheme="default"] .md-icon .system-mode, body:not([data-md-prefers-color-scheme="true"])[data-md-color-scheme="default"] .md-icon .unknown-mode {
+body:not([data-md-prefers-color-scheme="true"])[data-md-color-scheme="default"] .md-icon .dark-mode, body:not([data-md-prefers-color-scheme="true"])[data-md-color-scheme="default"] .md-icon .system-mode, body:not([data-md-prefers-color-scheme="true"])[data-md-color-scheme="default"] .md-icon .unknown-mode {
 	 display: none;
 }
- body:not([data-md-prefers-color-scheme="true"]):not([data-md-color-scheme="default"]):not([data-md-color-scheme="slate"]) .md-icon .dark-mode, body:not([data-md-prefers-color-scheme="true"]):not([data-md-color-scheme="default"]):not([data-md-color-scheme="slate"]) .md-icon .light-mode, body:not([data-md-prefers-color-scheme="true"]):not([data-md-color-scheme="default"]):not([data-md-color-scheme="slate"]) .md-icon .system-mode {
+body:not([data-md-prefers-color-scheme="true"])[data-md-color-scheme="preference"] .md-icon .dark-mode, body:not([data-md-prefers-color-scheme="true"])[data-md-color-scheme="preference"] .md-icon .system-mode, body:not([data-md-prefers-color-scheme="true"])[data-md-color-scheme="preference"] .md-icon .unknown-mode {
 	 display: none;
 }
- body[data-md-prefers-color-scheme="true"] .md-icon .dark-mode, body[data-md-prefers-color-scheme="true"] .md-icon .light-mode, body[data-md-prefers-color-scheme="true"] .md-icon .unknown-mode {
-	 display: none;
-}
- 
