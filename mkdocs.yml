@@ -30,6 +30,7 @@ nav:
   - tutorial/index.md
   - Dependencies:
     - tutorial/dependencies/index.md
+- customization.md
 - release-notes.md
 markdown_extensions:
 - toc:
