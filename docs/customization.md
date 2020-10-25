@@ -111,27 +111,72 @@ Alternatively, if you're running Material for MkDocs from within Docker, use:
     ```
 
 
-=== "bash"
+=== "Bash"
 
-    ```
-    docker run --rm -it -v ${PWD}:/docs squidfunk/mkdocs-material new .
+    ```bash
+	#!/bin/bash
+	ARG=$1
+
+	function mimic {
+	  if [[ -z $ARG ]]; then
+	    ARG='world'
+	  fi
+	  echo "hello $ARG"
+	}
+
+	mimic $ARG
+
     ```
 
 === "Java"
 
-    ```
-    docker run --rm -it -v ${PWD}:/docs squidfunk/mkdocs-material new .
+    ```Java
+	public class MyClass {
+	  int x = 5;
+
+	  public static void main(String[] args) {
+	    MyClass myObj = new MyClass();
+	    System.out.println(myObj.x);
+	  }
+	}
     ```
 
 === "C"
 
-    ```
-    docker run --rm -it -v ${PWD}:/docs squidfunk/mkdocs-material new .
+    ```C
+	int main(void)
+	{
+	  RectangleClass r1;
+
+	  rectangle_new_with_lengths(&r1, 4.f, 5.f);
+	  printf("rectangle r1's area is %f units square\n", shape_computeArea(&r1));
+	  return 0;
+	}
     ```
 
 === "Go"
 
-    ```
-    docker run --rm -it -v ${PWD}:/docs squidfunk/mkdocs-material new .
+    ```go
+	package employee
+
+	import (  
+	    "fmt"
+	)
+
+	type employee struct {  
+	    firstName   string
+	    lastName    string
+	    totalLeaves int
+	    leavesTaken int
+	}
+
+	func New(firstName string, lastName string, totalLeave int, leavesTaken int) employee {  
+	    e := employee {firstName, lastName, totalLeave, leavesTaken}
+	    return e
+	}
+
+	func (e employee) LeavesRemaining() {  
+	    fmt.Printf("%s %s has %d leaves remaining\n", e.firstName, e.lastName, (e.totalLeaves - e.leavesTaken))
+	}
     ```
 
