@@ -4,6 +4,9 @@ This project is licensed under the terms of the MIT license.
 
 Alternatively, if you're running Material for MkDocs from within Docker, use:
 
+
+
+
 === "Python"
 
     ```python
@@ -180,3 +183,4 @@ Alternatively, if you're running Material for MkDocs from within Docker, use:
 	}
     ```
 
+[vscode](#){: .md-button #code }  [slate](#){: .md-button } [mkdocs-default](#){: .md-button }
