@@ -27,12 +27,14 @@ plugins:
 nav:
 - MkDocs: index.md
 - Tutorial - User Guide:
-  - tutorial/index.md
+  - axample-folder/index.md
   - Dependencies:
     - tutorial/dependencies/index.md
+- features.md
 - customization.md
 - release-notes.md
 markdown_extensions:
+- pymdownx.inlinehilite
 - toc:
     permalink: true
 - markdown.extensions.codehilite:
@@ -40,6 +42,7 @@ markdown_extensions:
 - markdown_include.include:
     base_path: docs
 - admonition
+- pymdownx.details
 - codehilite
 - extra
 - pymdownx.superfences:
@@ -48,6 +51,9 @@ markdown_extensions:
       class: mermaid
       format: !!python/name:pymdownx.superfences.fence_div_format ''
 - pymdownx.tabbed
+- pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 extra:
   social:
   - icon: fontawesome/brands/github-alt
