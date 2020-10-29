@@ -11,6 +11,8 @@ display a loading promt as well as example output in your markdown files. This t
 is provided courtesy of <a href="https://github.com/tiangolo/fastapi/tree/master/docs" class="external-link" target="_blank">FastApi</a>
 
 
+_Example_:
+
 ````markdown
 <div class="termy">
 
@@ -24,6 +26,10 @@ INFO:     Application startup complete.
 
 </div>
 ````
+
+
+_Result_:
+
 
 <div class="termy">
 
@@ -44,8 +50,8 @@ INFO:     Application startup complete.
 
 The [Highlight][3] extension, which is part of [Python Markdown Extensions][5],
 integrates with Material for MkDocs and provides several options for
-configuring syntax highlighting of code blocks, to see documentation on setting up
-configuration see the <a href="https://squidfunk.github.io/mkdocs-material/reference/code-blocks/" class="external-link" target="_blank">mkdocs-material documentation</a> 
+configuring syntax highlighting of code blocks, to see how to set up and configure this
+see the <a href="https://squidfunk.github.io/mkdocs-material/reference/code-blocks/" class="external-link" target="_blank">mkdocs-material documentation</a> 
 
     
 ### Usage
@@ -171,28 +177,158 @@ def bubble_sort(items):
 ##Admonitions
 [:octicons-file-code-24: Source][1] · [:octicons-workflow-24: Extension][2]
 
-Admonitions, also known as call-outs, are an excellent choice for including side content without significantly interrupting the document flow. Material for MkDocs provides several different types of admonitions and allows for the inclusion and nesting of arbitrary content.
+Admonitions, also known as call-outs, are an devent choice for including side content without significantly interrupting the document flow. 
+Material for MkDocs provides several different types of admonitions and allows for the inclusion and nesting of arbitrary content. A
+details block follows the syntax and semantics of admonition blocks, but must start with `???`. The `???` can then be followed by a
+admonition type e.g. `example` 
+<a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/" class="external-link" target="_blank">(view supported types)</a>. 
 
+### Collapsed Blocks
 
+_Example_:
 
-####collapsible
+``` markdown
+??? example 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+```
+
+_Result_:
+
+??? example 
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+### Open blocks
+
+You can add a `"title"` by adding quotations after your supported admonition type
+<a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/" class="external-link" target="_blank">(view supported types)</a>. 
+Adding a `+` after `???` will render the block as open on page load:
+
+_Example_:
+
+``` markdown
+???+ note "Example Title"
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+```
+
+_Result_:
+
+???+ note "Example Title"
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+There are many supported admonition types and these can be added to explain bugs or issues users may encounter. 
+You can fit code blocks or any other mkdocs markdown inside these blocks so feel free to use them to add collapsible content.
+
+??? Tip "No title Icon or Bar"
+
+    Similar to changing the title, the icon and title can be omitted entirely by adding an empty string directly after the type qualifier. 
+    Note that this will not work for collapsible blocks.
+
+	``` markdown
+	!!! note ""
+	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+	    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+	    massa, nec semper lorem quam in massa.
+	```
+
+	_Result_:
+
+	!!! note ""
+
+	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+	    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+	    massa, nec semper lorem quam in massa.
+
 
 
 ## Images
 
+You can add images using the following syntax `![Placeholder_text](path/to/img.jpg)`.
+You can add images in the `docs/img` folder and reference them in markdown. When the [Attribute List][3] extension is enabled, 
+images can be aligned by adding the respective alignment directions via the `align` attribute, i.e.
+`align=left` or `align=right`. Along with this you can assign width with the syntax `width=200`.
+
+### Allignment 
+
+=== "Left"
+
+    _Example_:
+
+    ``` markdown
+    ![Placeholder](img/example.png){: align=left width=300 }
+    ```
+
+    _Result_:
+
+    ![Placeholder](img/example.png){: align=left width=300 }
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+=== "Right"
+
+    _Example_:
+
+    ``` markdown
+    ![Placeholder](https://dummyimage.com/600x400/eee/aaa){: align=right }
+    ```
+
+    _Result_:
+
+    ![Placeholder](https://dummyimage.com/600x400/f5f5f5/aaaaaa&text=–%20Image%20–){: align=right width=300 }
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+_If there's insufficient space to render the text next to the image, the image
+will stretch to the full width of the viewport, e.g. on mobile viewports._
 
 ### Image captions
 
+Sadly, the Markdown syntax doesn't provide native support for image captions,
+but it's always possible to resort to HTML. Using `figure` and `figcaption`, captions can be added to images.
 
-<details markdown="1">
-<summary>Load Images faster</summary>
+_Example_:
 
-Image Lazy loading 
-**Note**:
+```html
+<figure>
+  <img src="https://dummyimage.com/600x400/eee/aaa" width="300" />
+  <figcaption>Image caption</figcaption>
+</figure>
+```
 
-If you don't know, check the _"In a hurry?"_ section about <a href="https://fastapi.tiangolo.com/async/#in-a-hurry" target="_blank">`async` and `await` in the docs</a>.
+_Result_:
 
-</details>
+<figure>
+  <img src="https://dummyimage.com/600x400/f5f5f5/aaaaaa&text=–%20Image%20–" width="300" />
+  <figcaption>Image caption</figcaption>
+</figure>
+
+
+
+??? Tip "Image lazy-loading"
+
+	Modern browsers provide [native support for lazy-loading images][4] through the
+	`loading` attribute, which degrades to eager-loading in browsers without
+	support. As with [image alignment][5], if the [Attribute List][3] extension is
+	enabled, images can be lazy-loaded by adding `loading=lazy`.
+
+	_Example_:
+
+	``` markdown
+	![Placeholder](https://dummyimage.com/600x400/eee/aaa){: loading=lazy }
+	```
 
 ## Content tabs
 
@@ -292,16 +428,141 @@ _Result_:
 
 ## Icons
 
-* :material-material-design: – [Material Design][8]
-* :fontawesome-brands-font-awesome-flag: – [FontAwesome][9]
-* :octicons-mark-github-16: – [Octicons][10]
+Material for mkdocs supports more than 7,000 icons[7] and 
+thousands of emojis with very little effort. Material design,
+font awesome and octicons icons are supported
 
+Emojis and Icons can be integrated in Markdown by putting the shortcode of the emoji
+between two colons. To see how to add custom css rules to Icons as well as custom Icons see the 
+<a href="https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/" class="external-link" target="_blank">mkdocs icon documentation</a>.
+
+_Example_:
+
+````markdown
+:smile: 
+
+:material-account-circle: – `.icons/material/account-circle.svg`
+
+:fontawesome-regular-laugh-wink: – `.icons/fontawesome/regular/laugh-wink.svg`
+
+:octicons-octoface-16: – `.icons/octicons/octoface-16.svg`
+````
+
+_Result_:
+
+:smile: 
+
+:material-account-circle: – `.icons/material/account-circle.svg`
+
+:fontawesome-regular-laugh-wink: – `.icons/fontawesome/regular/laugh-wink.svg`
+
+:octicons-octoface-16: – `.icons/octicons/octoface-16.svg`
 
 ## Data tables
 
+Data tables can be used at any position in your project documentation and can
+contain arbitrary Markdown, including inline code blocks, as well as [icons and
+emojis][3].
+
+_Example_:
+
+``` markdown
+| Method      | Description                          |
+| ----------- | ------------------------------------ |
+| `GET`       | :material-check:     Fetch resource  |
+| `PUT`       | :material-check-all: Update resource |
+| `DELETE`    | :material-close:     Delete resource |
+```
+
+_Result_:
+
+| Method      | Description                          |
+| ----------- | ------------------------------------ |
+| `GET`       | :material-check:     Fetch resource  |
+| `PUT`       | :material-check-all: Update resource |
+| `DELETE`    | :material-close:     Delete resource |
+
+  [3]: icons-emojis.md
+
+## Tasklists
+
+When the [Tasklist][7] extension is enabled, unordered list items can be
+prefixed with `[ ]` to render an unchecked or `[x]` to render a checked
+checkbox. Along with normal markdown lists which can be prefficed with `*`
+or `1.` tasklists provide you a way of annotating completed tasks.
+
+_Example_:
+
+``` markdown
+* [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit
+* [ ] Vestibulum convallis sit amet nisi a tincidunt
+    * [x] In hac habitasse platea dictumst
+    * [x] In scelerisque nibh non dolor mollis congue sed et metus
+    * [ ] Praesent sed risus massa
+* [ ] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
+```
+
+_Result_:
+
+* [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit
+* [ ] Vestibulum convallis sit amet nisi a tincidunt
+    * [x] In hac habitasse platea dictumst
+    * [x] In scelerisque nibh non dolor mollis congue sed et metus
+    * [ ] Praesent sed risus massa
+* [ ] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
+
+  [7]: #tasklist
+
+##Footnotes and Links 
+
+Footnotes are a great way to add references to supplemental or additional information for a specific section of a document without interrupting the document flow.
+Material for MkDocs provides the ability to insert inline footnotes and render them at the bottom of the page. 
+A footnote reference must be enclosed in square brackets and must start with a
+caret `^`, directly followed by an arbitrary identifier, which is similar to
+the standard Markdown link syntax. 
+Along with this you can just use an arbitrary identifier in square brackets to insert a link.
+_Example_:
+
+``` markdown
+Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
+
+Lorem ipsum[1] dolor sit amet, consectetur adipiscing elit[2].
+```
+
+_Result_:
+
+Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
+
+Lorem [ipsum][1] dolor sit amet, consectetur adipiscing [elit][2].
 
 
-## Footnotes
+### Adding footnote content
+
+The footnote content must be declared with the same identifier as the reference.
+It can be inserted at an arbitrary position in the document and is always
+rendered at the bottom of the page. Furthermore, a backlink to the footnote
+reference is automatically added.
+
+#### on a single line
+
+Short statements can be written on the same line.
+
+_Example_:
+
+``` markdown
+[^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+[2]: https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/main/extensions/pymdownx/_highlight.scss
+```
+
+_Result_:
+
+[Jump to footnote at the bottom of the page](#fn:1)
+
+Or click the link on the highlighted words to follow the link
+
+
+  [^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   [1]: https://pygments.org
   [2]: https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/main/extensions/pymdownx/_highlight.scss
   [3]: https://facelessuser.github.io/pymdown-extensions/extensions/highlight/
