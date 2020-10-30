@@ -10,6 +10,37 @@ start by cloning the repo
 add bash thing here
 
 ## Install dependencies 
+=== "pipenv"
+
+    ``` c
+    #include <stdio.h>
+
+    int main(void) {
+      printf("Hello world!\n");
+      return 0;
+    }
+    ```
+=== "docker"
+
+    ``` c
+    #include <stdio.h>
+
+    int main(void) {
+      printf("Hello world!\n");
+      return 0;
+    }
+    ```
+=== "virtualenv or pip"
+
+    ``` c
+    #include <stdio.h>
+
+    int main(void) {
+      printf("Hello world!\n");
+      return 0;
+    }
+    ```
+
 
 
 ### with pipenv
