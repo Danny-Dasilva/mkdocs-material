@@ -1,13 +1,13 @@
 
 site_name: Doc Generator
-site_description: FastAPI framework, high performance, easy to learn, fast to code, ready for production
+site_description: Quickly generate docs with markdown and deploy them  
 site_url: https://fastapi.tiangolo.com/
 theme:
   name: material
   custom_dir: docs/theme
   palette:
     scheme: iceberg 
-    # primary: --md-primary-fg-color:#84a0c6; set in custom.css
+    # primary: --md-primary-fg-color:#84a0c6; set in .docs/custom.css
     accent: blue  
   icon:
     repo: fontawesome/brands/github-alt
@@ -24,6 +24,8 @@ plugins:
 - search
 - markdownextradata:
     data: data
+
+# add navigation here
 nav:
 - MkDocs: index.md
 - Tutorial - User Guide:
@@ -33,6 +35,8 @@ nav:
 - features.md
 - customization.md
 - release-notes.md
+
+# extensions
 markdown_extensions:
 - pymdownx.inlinehilite
 - footnotes

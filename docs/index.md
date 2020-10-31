@@ -1,72 +1,88 @@
 
+## Getting started
+
+Begin by cloning the repo and pathing into it
+
+```console
+git clone https://github.com/Danny-Dasilva/mkdocs-material.git && cd mkdocs-material 
+```
 
 
-
-
-
-
-start by cloning the repo
-
-add bash thing here
 
 ## Install dependencies 
+
 === "pipenv"
 
-    ``` c
-    #include <stdio.h>
-
-    int main(void) {
-      printf("Hello world!\n");
-      return 0;
-    }
+    In the case you do not have pipenv you can install it with
+    
     ```
+    pip install pipenv
+    ```
+
+    Install dependencies with 
+
+    <div class="termy">
+
+	```console
+	$ pipenv install
+
+	---> 100%
+	```
+    </div>
+   
+    danger thing python version
+
 === "docker"
 
-    ``` c
-    #include <stdio.h>
+    The [Docker image][1] is a great way to get up and running in a few minutes, as it comes with all dependencies pre-installed. Pull the image for the latest version with:
 
-    int main(void) {
-      printf("Hello world!\n");
-      return 0;
-    }
-    ```
+     <div class="termy">
+
+	```console
+	$ docker pull dannydasilva/mkdocs-material
+
+	---> 100%
+	```
+     </div>
+
+    The mkdocs executable is provided as an entry point and serve is the default command. 
+    If you're not familiar with Docker don't worry, the following sections cover how to serve build and deploy.
+    
+    The following plugins are bundled with the Docker image:
+    
+    * markdown-include
+    * mkdocs-markdownextradata-plugin
+
+    as well as others
+    
+ 
+    ??? Info "How can I add plugins to the Docker image?"
+        The docker container bundles useful and common plugins on top of the standard mkdocs
+        container however if the plugin you want to use is not included, you can 
+        create a new Dockerfile and extend the Docker image with your custom installation routine:
+
+        ```dockerfile
+        FROM dannydasilva/mkdocs-material
+        RUN pip install ...
+        ```
+
+        Next, you can build the image with the following command.
+
+        ```
+        docker build -t dannydasilva/mkdocs-material .
+        ```
+
+        The new image can be used exactly like the default image, the commands below will operate the same.
+   
+
+
 === "virtualenv or pip"
 
-    ``` c
-    #include <stdio.h>
-
-    int main(void) {
-      printf("Hello world!\n");
-      return 0;
-    }
-    ```
+   
+    ``` pip install -r requirements.txt ```
 
 
 
-### with pipenv
-python versioning
-
-### with docker
-
-The [Docker image][1] is a great way to get up and running in a few minutes, as it comes with all dependencies pre-installed. Pull the image for the latest version with:
-
-`docker pull dannydasilva/mkdocs-material`
-
-The mkdocs executable is provided as an entry point and serve is the default command. 
-If you're not familiar with Docker don't worry, the following sections cover how to serve build and deploy.
-
-The following plugins are bundled with the Docker image:
-
-* markdown-include
-* mkdocs-markdownextradata-plugin
-
-HFHHFHHFHHOW CN I ADD PLUGINS
-
-
-
-### with virtualenv or pip 
-
-pip install -r mkdocs-material/requirements.txt
 
 ## Make changes
 
