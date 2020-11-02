@@ -13,7 +13,7 @@ git clone https://github.com/Danny-Dasilva/mkdocs-material.git && cd mkdocs-mate
 
 === "pipenv"
 
-    In the case you do not have pipenv you can install it with
+    In case you __do not__ have pipenv you can install it with
     
     ```
     pip install pipenv
@@ -30,7 +30,17 @@ git clone https://github.com/Danny-Dasilva/mkdocs-material.git && cd mkdocs-mate
 	```
     </div>
    
-    danger thing python version
+    ??? Danger "Warning: Your Pipfile requires python_version 3.8"
+        This pipenv file was created using python `3.8` however it is not a requirement to run the package. You can tack 
+        on `--python <$your version>` to pipenv in order to run it with that python version. 
+
+        __Example__:
+
+        ```bash
+        pipenv install --python 3.7
+
+        ```
+
 
 === "docker"
 
@@ -77,9 +87,43 @@ git clone https://github.com/Danny-Dasilva/mkdocs-material.git && cd mkdocs-mate
 
 
 === "virtualenv or pip"
+    Using a virtual environment is not a requirement but is highly suggested. You can install 
+    the dependencies on the system with.
 
-   
-    ``` pip install -r requirements.txt ```
+    ``` 
+    pip install -r requirements.txt
+    ```
+
+    If you would prefer to use `virtualenv`  you can install it with 
+
+    ```
+    pip install virtualenv
+    ```
+
+    create the environment
+
+    ```
+    virtualenv venv
+    ```
+
+    Activate the environment
+
+    === "Mac OS / Linux"
+        ```
+        source venv/bin/activate
+        ```
+    === "windows"
+        ```
+        venv\Scripts\activate
+        ```
+
+    and finally install the dependencies
+    
+    ```
+    pip install -r requirements.txt
+    ```
+
+    
 
 
 
