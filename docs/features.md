@@ -1,7 +1,10 @@
 
-## Markdown Basics
+## Basics
 
-the following content is borrowed for mkdocs with some features comming from fastapi
+Ideally you have a basic understanding of markdown syntax however if you 
+need a refresher feel free to visit [here][1]. The following are extra features
+built into mkdocs
+
 
 ##Bash terminal
 
@@ -84,7 +87,7 @@ allows splitting large code blocks for readability.
 
 _Example_:
 
-```` markdown hl_lines="2 3"
+```` markdown hl_lines="1"
 ``` python linenums="1"
 def bubble_sort(items):
     for i in range(len(items)):
@@ -108,7 +111,7 @@ def bubble_sort(items):
     The number passed into `#!python range()` will be the start of the line
     _Example_:
 
-    ```` markdown
+    ```` markdown hl_lines="1"
     ``` python linenums="7"
     def bubble_sort(items):
         for i in range(len(items)):

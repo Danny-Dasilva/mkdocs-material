@@ -1,3 +1,49 @@
+
+## Colors
+
+## Logo
+## Additional CSS and Javascript
+
+=== "CSS"
+
+    If you want to tweak some colors or change the spacing of certain elements, 
+    you can do this in a separate stylesheet. The easiest way is by creating a 
+    new stylesheet file in the `docs/` directory:
+    ```
+    ├─ docs/
+    │  └─ stylesheets/
+    │     └─ extra.css
+    └─ mkdocs.yml
+    ```
+    Then, add the following line to mkdocs.yml:
+
+    ```yaml
+    extra_css:
+      - stylesheets/extra.css
+    ```
+
+=== "Javascript"
+    The same is true for additional JavaScript. If you want to integrate 
+    another syntax highlighter or add some custom logic to your theme, 
+    create a new JavaScript file in the `docs/` directory:
+    ```
+    .
+    ├─ docs/
+    │  └─ javascripts/
+    │     └─ extra.js
+    └─ mkdocs.yml
+    ```
+    Then, add the following line to mkdocs.yml:
+
+    ```yaml
+    extra_css:
+      - javascripts/extra.js
+    ```
+
+
+Spin up the live preview server and start typing your changes in your additional stylesheet file – you should see them almost instantly after saving.
+
+
 ## Styling code blocks
 This project is licensed under the terms of the MIT license.
 
@@ -183,4 +229,3 @@ Alternatively, if you're running Material for MkDocs from within Docker, use:
 	}
     ```
 
-[vscode](#){: .md-button #code }  [slate](#){: .md-button } [mkdocs-default](#){: .md-button }

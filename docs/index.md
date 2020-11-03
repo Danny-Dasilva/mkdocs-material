@@ -112,7 +112,7 @@ git clone https://github.com/Danny-Dasilva/mkdocs-material.git && cd mkdocs-mate
         ```
         source venv/bin/activate
         ```
-    === "windows"
+    === "Windows"
         ```
         venv\Scripts\activate
         ```
@@ -221,13 +221,15 @@ The server will automatically rebuild upon saving. By default the server will be
 
     * Deploy documentation to GitHub Pages
 
-    `docker run --rm -it -v ~/.ssh:/root/.ssh -v ${PWD}:/docs dannydasilva/mkdocs-material gh-deploy `
+    ```
+    docker run --rm -it -v ~/.ssh:/root/.ssh -v ${PWD}:/docs dannydasilva/mkdocs-material gh-deploy 
+    ```
 
 
 
 
 === "virtualenv or pip" 
-    assuming you are in a virtual environment
+    Assuming you are in a virtual environment
 
     ```
     mkdocs serve
@@ -251,7 +253,7 @@ When you're finished editing, you can build a static site from your Markdown fil
     ```
 
 === "virtualenv or pip"
-    assuming you are in a virtual environment
+    Assuming you are in a virtual environment
     ```
     mkdocs build 
     ```
@@ -259,19 +261,31 @@ When you're finished editing, you can build a static site from your Markdown fil
 
 ### Deploy 
 
-When you're finished editing, you can build a static site from your Markdown files with:
+If you're already hosting your code on GitHub, [GitHub Pages][5] is certainly the most convenient 
+way to publish your project documentation. It's free of charge and pretty easy to set up.
 
 
 === "pipenv"
-    
+    deploy to gihub pages with:
+    ```
+    pipenv run mkdocs gh-deploy
+    ```
+    Your documentation should shortly appear at 
+    `<$username>.github.io/<$your_github_repository>`.
 
 === "docker"
 
-    * Deploy documentation to GitHub Pages
+    Deploy documentation to GitHub Pages
+
     `docker run --rm -it -v ~/.ssh:/root/.ssh -v ${PWD}:/docs dannydasilva/mkdocs-material gh-deploy `
 
+    Your documentation should shortly appear at `<$username>.github.io/<$your_github_repository>`.
+
 === "virtualenv or pip"
-    assuming you are in a virtual environment
+    Assuming you are in a virtual environment
     ```
     mkdocs gh-deploy
     ```
+    Your documentation should shortly appear at `<$username>.github.io/<$your_github_repository>`.
+
+
