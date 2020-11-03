@@ -131,38 +131,122 @@ git clone https://github.com/Danny-Dasilva/mkdocs-material.git && cd mkdocs-mate
 ## Make changes
 
 Feel free to make changes to the index.md or add your own files.
+The navigation tree is generated from the `mkdocs.yaml` file. 
+Lets say I created `example.md` in `/docs` i could add it to the
+site navigation by adding the filename to the .yaml file. 
 
-explanation of yaml and paths here
+__in mkdocs.yml__
+```yaml linenums="28" hl_lines="9" 
+# add navigation here
+nav:
+- MkDocs: index.md
+- features.md
+- customization.md
+- Example - Nested folder:
+  - Index.md with title: example-folder/index.md
+  - Sub folder:
+      - Custom Title: example-folder/sub-folder/index.md
+- example.md
+```
+
+###Nesting folders
+
+For larger sections where you need to break markdown files with a similar theme 
+you may consider nesting your file structure. Lets say we wanted to add `nested_example.md`
+to `docs/example-folder/sub-folder/`. We can add it to the navigation 
+
+```yaml linenums="28" hl_lines="9" 
+# add navigation here
+nav:
+- MkDocs: index.md
+- features.md
+- customization.md
+- Example - Nested folder:
+  - Index.md with title: example-folder/index.md
+  - Sub folder:
+      - Custom Title: example-folder/sub-folder/index.md
+      - Nesting folder: example-folder/sub-folder/nested_example.md
+- example.md
+```
+
+Note how the titles and navigation use the file name by default. You can overide this
+with the following syntax `-Custom title: path/to/file.md`
 
 
 
-## Run Build or deploy 
 
-While you are editing your content you can see a live preview. The server
-will automatically rebuild upon saving. You can start that with 
+## Run Build and Deploy 
 
-tri split 
-### with pipenv
-`pipenv run mkdocs serve`
-### with docker
+You can run mkdocs locally to preview changes, build out the html files or deploy to github pages with the following commands
 
+###Run
 
-Mount the folder where your mkdocs.yml resides as a volume into /docs:
+While you are editing your content you can use the live preview feature to see your changes.
+The server will automatically rebuild upon saving. By default the server will be hosted at
+[localhost:8000](localhost:8000). 
 
-*Start development server on http://localhost:8000
-
-`docker run --rm -it -p 8000:8000 -v ${PWD}:/docs dannydasilva/mkdocs-material`
-
-* Build Documentation
-
-`docker run --rm -it -v ${PWD}:/docs dannydasilva/mkdocs-material build`
-
-* Deploy documentation to GitHub Pages
-
-`docker run --rm -it -v ~/.ssh:/root/.ssh -v ${PWD}:/docs dannydasilva/mkdocs-material gh-deploy `
-
-`docker build -t dannydasilva/mkdocs-material .`
+=== "pipenv"
+    Quick
+    ```
+    pipenv run mkdocs serve
+    ```
 
 
+    ??? Info "Work inside env"
+        __alternatively__ you can shell into your pipenv instance and serve it there
 
-### with virtualenv or pip 
+        ``` 
+        pipenv shell
+        ```
+
+        then 
+
+        ```
+        mkdocs serve
+        ```
+
+
+=== "docker"
+
+
+    Mount the folder where your mkdocs.yml resides as a volume into /docs:
+
+    * Start development server on [http://localhost:8000](localhost:8000)
+
+    ```
+    docker run --rm -it -p 8000:8000 -v ${PWD}:/docs dannydasilva/mkdocs-material
+    ```
+
+
+
+    * Deploy documentation to GitHub Pages
+
+    `docker run --rm -it -v ~/.ssh:/root/.ssh -v ${PWD}:/docs dannydasilva/mkdocs-material gh-deploy `
+
+
+
+
+=== "virtualenv or pip" 
+    assuming you are in a virtual environment
+
+    ```
+    mkdocs serve
+    ```
+
+### Build
+
+When you're finished editing, you can build a static site from your Markdown files with:
+
+
+=== "pipenv"
+    
+
+=== "docker"
+    * Build Documentation
+    `docker run --rm -it -v ${PWD}:/docs dannydasilva/mkdocs-material build`
+
+==="virtualenv or pip"
+    assuming you are in a virtual environment
+    ```
+    mkdocs build 
+    ```

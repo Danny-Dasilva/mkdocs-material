@@ -28,13 +28,12 @@ plugins:
 # add navigation here
 nav:
 - MkDocs: index.md
-- Tutorial - User Guide:
-  - axample-folder/index.md
-  - Dependencies:
-    - tutorial/dependencies/index.md
 - features.md
 - customization.md
-- release-notes.md
+- Example - Nested folder:
+  - Index.md with title: example-folder/index.md
+  - Sub folder:
+      - Custom Title: example-folder/sub-folder/index.md
 
 # extensions
 markdown_extensions:
