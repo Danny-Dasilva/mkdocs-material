@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
-     <loc>https://fastapi.tiangolo.com/</loc>
+     <loc>https://danny-dasilva.github.io/mkdocs-material/</loc>
      <lastmod>2020-11-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://fastapi.tiangolo.com/features/</loc>
+     <loc>https://danny-dasilva.github.io/mkdocs-material/features/</loc>
      <lastmod>2020-11-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://fastapi.tiangolo.com/customization/</loc>
+     <loc>https://danny-dasilva.github.io/mkdocs-material/customization/</loc>
      <lastmod>2020-11-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://fastapi.tiangolo.com/example-folder/</loc>
+     <loc>https://danny-dasilva.github.io/mkdocs-material/example-folder/</loc>
      <lastmod>2020-11-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://fastapi.tiangolo.com/example-folder/sub-folder/</loc>
+     <loc>https://danny-dasilva.github.io/mkdocs-material/example-folder/sub-folder/</loc>
      <lastmod>2020-11-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
