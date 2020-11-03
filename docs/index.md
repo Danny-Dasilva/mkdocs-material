@@ -136,7 +136,7 @@ Lets say I created `example.md` in `/docs` i could add it to the
 site navigation by adding the filename to the .yaml file. 
 
 __in mkdocs.yml__
-```yaml linenums="28" hl_lines="9" 
+```yaml linenums="28" hl_lines="10" 
 # add navigation here
 nav:
 - MkDocs: index.md
@@ -239,14 +239,39 @@ When you're finished editing, you can build a static site from your Markdown fil
 
 
 === "pipenv"
+    ``` 
+    pipenv run mkdocs serve
+    ```
     
 
 === "docker"
-    * Build Documentation
-    `docker run --rm -it -v ${PWD}:/docs dannydasilva/mkdocs-material build`
+    Build Documentation
+    ``` 
+    docker run --rm -it -v ${PWD}:/docs dannydasilva/mkdocs-material build 
+    ```
 
-==="virtualenv or pip"
+=== "virtualenv or pip"
     assuming you are in a virtual environment
     ```
     mkdocs build 
+    ```
+
+
+### Deploy 
+
+When you're finished editing, you can build a static site from your Markdown files with:
+
+
+=== "pipenv"
+    
+
+=== "docker"
+
+    * Deploy documentation to GitHub Pages
+    `docker run --rm -it -v ~/.ssh:/root/.ssh -v ${PWD}:/docs dannydasilva/mkdocs-material gh-deploy `
+
+=== "virtualenv or pip"
+    assuming you are in a virtual environment
+    ```
+    mkdocs gh-deploy
     ```
