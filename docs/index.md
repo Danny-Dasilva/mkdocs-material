@@ -241,8 +241,9 @@ When you're finished editing, you can build a static site from your Markdown fil
 
 
 === "pipenv"
+    Build Documentation
     ``` 
-    pipenv run mkdocs serve
+    pipenv run mkdocs build 
     ```
     
 
@@ -277,7 +278,9 @@ way to publish your project documentation. It's free of charge and pretty easy t
 
     Deploy documentation to GitHub Pages
 
-    `docker run --rm -it -v ~/.ssh:/root/.ssh -v ${PWD}:/docs dannydasilva/mkdocs-material gh-deploy `
+    ```
+    docker run --rm -it -v ~/.ssh:/root/.ssh -v ${PWD}:/docs dannydasilva/mkdocs-material gh-deploy 
+    ```
 
     Your documentation should shortly appear at `<$username>.github.io/<$your_github_repository>`.
 
