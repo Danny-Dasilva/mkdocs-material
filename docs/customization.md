@@ -1,7 +1,135 @@
 
 ## Colors
+Colors can be set in `/css/custom.css` as well as `mkdocs.yaml`
+
+### yaml configuration
+
+#### Primary color
+
+[:octicons-file-code-24: Source][4] · :octicons-milestone-24: Default: `indigo`
+
+The _primary color_ is used for the header, the sidebar, text links and several
+other components. In order to change the primary color, set the following value
+in `mkdocs.yml` to a valid color name:
+
+``` yaml
+theme:
+  palette:
+    primary: indigo
+```
+
+:material-cursor-default-click-outline: Click on a tile to change the primary
+color:
+
+<div class="tx-switch">
+  <button data-md-color-primary="red"><code>red</code></button>
+  <button data-md-color-primary="pink"><code>pink</code></button>
+  <button data-md-color-primary="purple"><code>purple</code></button>
+  <button data-md-color-primary="deep-purple"><code>deep purple</code></button>
+  <button data-md-color-primary="indigo"><code>indigo</code></button>
+  <button data-md-color-primary="blue"><code>blue</code></button>
+  <button data-md-color-primary="light-blue"><code>light blue</code></button>
+  <button data-md-color-primary="cyan"><code>cyan</code></button>
+  <button data-md-color-primary="teal"><code>teal</code></button>
+  <button data-md-color-primary="green"><code>green</code></button>
+  <button data-md-color-primary="light-green"><code>light green</code></button>
+  <button data-md-color-primary="lime"><code>lime</code></button>
+  <button data-md-color-primary="yellow"><code>yellow</code></button>
+  <button data-md-color-primary="amber"><code>amber</code></button>
+  <button data-md-color-primary="orange"><code>orange</code></button>
+  <button data-md-color-primary="deep-orange"><code>deep orange</code></button>
+  <button data-md-color-primary="brown"><code>brown</code></button>
+  <button data-md-color-primary="grey"><code>grey</code></button>
+  <button data-md-color-primary="blue-grey"><code>blue grey</code></button>
+  <button data-md-color-primary="black"><code>black</code></button>
+  <button data-md-color-primary="white"><code>white</code></button>
+</div>
+
+<script>
+  var buttons = document.querySelectorAll("button[data-md-color-primary]")
+  buttons.forEach(function(button) {
+    button.addEventListener("click", function() {
+      var attr = this.getAttribute("data-md-color-primary")
+      document.body.setAttribute("data-md-color-primary", attr)
+      var name = document.querySelector("#__code_2 code span:nth-child(7)")
+      name.textContent = attr.replace("-", " ")
+    })
+  })
+</script>
+
+  [4]: https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/palette/_primary.scss
+
+#### Accent color
+
+[:octicons-file-code-24: Source][5] · :octicons-milestone-24: Default: `indigo`
+
+The _accent color_ is used to denote elements that can be interacted with, e.g.
+hovered links, buttons and scrollbars. It can be changed in `mkdocs.yml` by
+choosing a valid color name:
+
+``` yaml
+theme:
+  palette:
+    accent: indigo
+```
+
+:material-cursor-default-click-outline: Click on a tile to change the accent
+color:
+
+<style>
+  .md-typeset button[data-md-color-accent] > code {
+    background-color: var(--md-code-bg-color);
+    color: var(--md-accent-fg-color);
+  }
+</style>
+
+<div class="tx-switch">
+  <button data-md-color-accent="red"><code>red</code></button>
+  <button data-md-color-accent="pink"><code>pink</code></button>
+  <button data-md-color-accent="purple"><code>purple</code></button>
+  <button data-md-color-accent="deep-purple"><code>deep purple</code></button>
+  <button data-md-color-accent="indigo"><code>indigo</code></button>
+  <button data-md-color-accent="blue"><code>blue</code></button>
+  <button data-md-color-accent="light-blue"><code>light blue</code></button>
+  <button data-md-color-accent="cyan"><code>cyan</code></button>
+  <button data-md-color-accent="teal"><code>teal</code></button>
+  <button data-md-color-accent="green"><code>green</code></button>
+  <button data-md-color-accent="light-green"><code>light green</code></button>
+  <button data-md-color-accent="lime"><code>lime</code></button>
+  <button data-md-color-accent="yellow"><code>yellow</code></button>
+  <button data-md-color-accent="amber"><code>amber</code></button>
+  <button data-md-color-accent="orange"><code>orange</code></button>
+  <button data-md-color-accent="deep-orange"><code>deep orange</code></button>
+</div>
+
+<script>
+  var buttons = document.querySelectorAll("button[data-md-color-accent]")
+  buttons.forEach(function(button) {
+    button.addEventListener("click", function() {
+      var attr = this.getAttribute("data-md-color-accent")
+      document.body.setAttribute("data-md-color-accent", attr)
+      var name = document.querySelector("#__code_3 code span:nth-child(7)")
+      name.textContent = attr.replace("-", " ")
+    })
+  })
+</script>
+
+  [5]: https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/palette/_accent.scss
+### custom css
+
 
 ## Logo
+The logo can be changed in the `mkdocs.yaml` file
+__in mkdocs.yml__
+```yaml linenums="13" hl_lines="10" 
+  #change logo here
+  logo: img/logo-white.svg
+  favicon: img/favicon.png
+ 
+```
+
+
+
 ## Additional CSS and Javascript
 
 === "CSS"
@@ -40,18 +168,7 @@
       - javascripts/extra.js
     ```
 
-
-Spin up the live preview server and start typing your changes in your additional stylesheet file – you should see them almost instantly after saving.
-
-
 ## Styling code blocks
-This project is licensed under the terms of the MIT license.
-
-
-Alternatively, if you're running Material for MkDocs from within Docker, use:
-
-
-
 
 === "Python"
 
