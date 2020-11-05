@@ -6,7 +6,7 @@ theme:
   custom_dir: docs/theme
   palette:
     scheme: iceberg 
-    # primary: --md-primary-fg-color:#84a0c6; set in .docs/custom.css
+    primary: iceberg_blue 
     accent: blue  
   icon:
     repo: fontawesome/brands/github-alt

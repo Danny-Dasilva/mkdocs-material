@@ -2,8 +2,56 @@
 ## Colors
 Colors can be set in `/css/custom.css` as well as `mkdocs.yaml`
 
-### yaml configuration
 
+
+# Changing the colors
+
+As any proper Material Design implementation, Material for MkDocs supports
+Google's original [color palette][1], which can be easily configured through 
+`mkdocs.yml`. Furthermore, colors can be customized with a few lines of CSS to
+fit your brand's identity by using [CSS variables][2].
+
+  [1]: http://www.materialui.co/colors
+  [2]: #custom-colors
+
+## Configuration
+
+### Color palette
+
+#### Color scheme
+
+[:octicons-file-code-24: Source][3] · :octicons-milestone-24: Default: `default`
+
+Material for MkDocs supports two _color schemes_: a light mode, which is just
+called `default`, and a dark mode, which is called `slate`. The color scheme
+can be set via `mkdocs.yml`:
+
+``` yaml hl_lines="3"
+theme:
+  palette:
+    scheme: default
+```
+
+:material-cursor-default-click-outline: Click on a tile to change the color
+scheme:
+
+<div class="tx-switch">
+  <button data-md-color-scheme="default"><code>default</code></button>
+  <button data-md-color-scheme="slate"><code>slate</code></button>
+  <button data-md-color-scheme="iceberg"><code>iceberg</code></button>
+</div>
+
+<script>
+  var buttons = document.querySelectorAll("button[data-md-color-scheme]")
+  buttons.forEach(function(button) {
+    button.addEventListener("click", function() {
+      var attr = this.getAttribute("data-md-color-scheme")
+      document.body.setAttribute("data-md-color-scheme", attr)
+      var name = document.querySelector("#__code_0 code span:nth-child(7)")
+      name.textContent = attr
+    })
+  })
+</script>
 #### Primary color
 
 [:octicons-file-code-24: Source][4] · :octicons-milestone-24: Default: `indigo`
@@ -12,7 +60,7 @@ The _primary color_ is used for the header, the sidebar, text links and several
 other components. In order to change the primary color, set the following value
 in `mkdocs.yml` to a valid color name:
 
-``` yaml
+``` yaml hl_lines="3"
 theme:
   palette:
     primary: indigo
@@ -43,6 +91,7 @@ color:
   <button data-md-color-primary="blue-grey"><code>blue grey</code></button>
   <button data-md-color-primary="black"><code>black</code></button>
   <button data-md-color-primary="white"><code>white</code></button>
+  <button data-md-color-primary="iceberg_blue"><code>iceberg_blue </code></button>
 </div>
 
 <script>
@@ -67,7 +116,7 @@ The _accent color_ is used to denote elements that can be interacted with, e.g.
 hovered links, buttons and scrollbars. It can be changed in `mkdocs.yml` by
 choosing a valid color name:
 
-``` yaml
+``` yaml hl_lines="3"
 theme:
   palette:
     accent: indigo
