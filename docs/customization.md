@@ -1,8 +1,4 @@
 
-## Colors
-Colors can be set in `/css/custom.css` as well as `mkdocs.yaml`
-
-
 
 # Changing the colors
 
