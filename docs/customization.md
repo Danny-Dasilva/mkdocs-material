@@ -166,7 +166,7 @@ color:
 ## Logo
 The logo can be changed in the `mkdocs.yaml` file
 __in mkdocs.yml__
-```yaml linenums="13" hl_lines="10" 
+```yaml linenums="13" hl_lines="2" 
   #change logo here
   logo: img/logo-white.svg
   favicon: img/favicon.png
@@ -200,7 +200,6 @@ __in mkdocs.yml__
     another syntax highlighter or add some custom logic to your theme, 
     create a new JavaScript file in the `docs/` directory:
     ```
-    .
     ├─ docs/
     │  └─ javascripts/
     │     └─ extra.js

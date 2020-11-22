@@ -17,18 +17,16 @@ git clone https://github.com/Danny-Dasilva/mkdocs-material.git && cd mkdocs-mate
     
     ```
     pip install pipenv
+
     ```
 
     Install dependencies with 
 
-    <div class="termy">
 
 	```console
-	$ pipenv install
+	pipenv install
 
-	---> 100%
 	```
-    </div>
    
     ??? Danger "Warning: Your Pipfile requires python_version 3.8"
         This pipenv file was created using python `3.8` however it is not a requirement to run the package. You can tack 
@@ -46,14 +44,11 @@ git clone https://github.com/Danny-Dasilva/mkdocs-material.git && cd mkdocs-mate
 
     The [Docker image][1] is a great way to get up and running in a few minutes, as it comes with all dependencies pre-installed. Pull the image for the latest version with:
 
-     <div class="termy">
 
 	```console
-	$ docker pull dannydasilva/mkdocs-material
+	docker pull dannydasilva/mkdocs-material
 
-	---> 100%
 	```
-     </div>
 
     The mkdocs executable is provided as an entry point and serve is the default command. 
     If you're not familiar with Docker don't worry, the following sections cover how to serve build and deploy.

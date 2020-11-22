@@ -27,7 +27,7 @@ plugins:
 
 # add navigation here
 nav:
-- MkDocs: index.md
+- Setup: index.md
 - features.md
 - customization.md
 - Example - Nested folder:
