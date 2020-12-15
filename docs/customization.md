@@ -89,7 +89,11 @@ color:
   <button data-md-color-primary="white"><code>white</code></button>
   <button data-md-color-primary="iceberg_blue"><code>iceberg_blue </code></button>
 </div>
-
+<style>
+[data-md-color-primary="iceberg_blue"] {
+--md-primary-fg-color: red
+}
+</style>
 <script>
   var buttons = document.querySelectorAll("button[data-md-color-primary]")
   buttons.forEach(function(button) {
