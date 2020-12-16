@@ -287,3 +287,4 @@ way to publish your project documentation. It's free of charge and pretty easy t
     Your documentation should shortly appear at `<$username>.github.io/<$your_github_repository>`.
 
 
+[^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
