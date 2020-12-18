@@ -257,9 +257,10 @@ When you're finished editing, you can build a static site from your Markdown fil
 
 ### Deploy 
 
-If you're already hosting your code on GitHub, [GitHub Pages][5] is certainly the most convenient 
+If you're already hosting your code on GitHub, [GitHub Pages][1] is certainly the most convenient 
 way to publish your project documentation. It's free of charge and pretty easy to set up.
 
+  [1]: https://pages.github.com/
 
 === "pipenv"
     deploy to gihub pages with:
@@ -286,5 +287,3 @@ way to publish your project documentation. It's free of charge and pretty easy t
     ```
     Your documentation should shortly appear at `<$username>.github.io/<$your_github_repository>`.
 
-
-[^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.

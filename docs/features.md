@@ -5,7 +5,6 @@ Ideally you have a basic understanding of markdown syntax however if you
 need a refresher feel free to visit [here][1]. The following are extra features
 built into mkdocs
 
-
 ##Bash terminal
 
 Using `termynal.js` and `termynal.css` in `/docs/js` and `/docs/js` respectively we can show
@@ -178,13 +177,13 @@ def bubble_sort(items):
     [18]: #inlinehilite
 
 ##Admonitions
-[:octicons-file-code-24: Source][1] · [:octicons-workflow-24: Extension][2]
+[:octicons-file-code-24: Source][5] · [:octicons-workflow-24: Extension][6]
 
 Admonitions, also known as call-outs, are an devent choice for including side content without significantly interrupting the document flow. 
 Material for MkDocs provides several different types of admonitions and allows for the inclusion and nesting of arbitrary content. A
 details block follows the syntax and semantics of admonition blocks, but must start with `???`. The `???` can then be followed by a
 admonition type e.g. `example` 
-<a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/" class="external-link" target="_blank">(view supported types)</a>. 
+<a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types" class="external-link" target="_blank">(view supported types)</a>. 
 
 ### Collapsed Blocks
 
@@ -208,7 +207,7 @@ _Result_:
 ### Open blocks
 
 You can add a `"title"` by adding quotations after your supported admonition type
-<a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/" class="external-link" target="_blank">(view supported types)</a>. 
+<a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types" class="external-link" target="_blank">(view supported types)</a>. 
 Adding a `+` after `???` will render the block as open on page load:
 
 _Example_:
@@ -256,11 +255,11 @@ You can fit code blocks or any other mkdocs markdown inside these blocks so feel
 ## Images
 
 You can add images using the following syntax `![Placeholder_text](path/to/img.jpg)`.
-You can add images in the `docs/img` folder and reference them in markdown. When the [Attribute List][3] extension is enabled, 
+You can add images in the `docs/img` folder and reference them in markdown. When the [Attribute List][7] extension is enabled, 
 images can be aligned by adding the respective alignment directions via the `align` attribute, i.e.
 `align=left` or `align=right`. Along with this you can assign width with the syntax `width=200`.
 
-### Allignment 
+### Alignment 
 
 === "Left"
 
@@ -322,9 +321,9 @@ _Result_:
 
 ??? Tip "Image lazy-loading"
 
-	Modern browsers provide [native support for lazy-loading images][4] through the
+	Modern browsers provide [native support for lazy-loading images][8] through the
 	`loading` attribute, which degrades to eager-loading in browsers without
-	support. As with [image alignment][5], if the [Attribute List][3] extension is
+	support. As with [image alignment][9], if the [Attribute List][7] extension is
 	enabled, images can be lazy-loaded by adding `loading=lazy`.
 
 	_Example_:
@@ -431,7 +430,7 @@ _Result_:
 
 ## Icons
 
-Material for mkdocs supports more than 7,000 icons[7] and 
+Material for mkdocs supports [more than 7,000 icons][7] and 
 thousands of emojis with very little effort. Material design,
 font awesome and octicons icons are supported
 
@@ -465,7 +464,7 @@ _Result_:
 
 Data tables can be used at any position in your project documentation and can
 contain arbitrary Markdown, including inline code blocks, as well as [icons and
-emojis][3].
+emojis][11].
 
 _Example_:
 
@@ -489,7 +488,7 @@ _Result_:
 
 ## Tasklists
 
-When the [Tasklist][7] extension is enabled, unordered list items can be
+When the [Tasklist][12] extension is enabled, unordered list items can be
 prefixed with `[ ]` to render an unchecked or `[x]` to render a checked
 checkbox. Along with normal markdown lists which can be prefficed with `*`
 or `1.` tasklists provide you a way of annotating completed tasks.
@@ -566,9 +565,17 @@ Or click the link on the highlighted words to follow the link
 
 
   [^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  [1]: https://pygments.org
+  [1]: https://guides.github.com/features/mastering-markdown/  
   [2]: https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/main/extensions/pymdownx/_highlight.scss
   [3]: https://facelessuser.github.io/pymdown-extensions/extensions/highlight/
   [4]: https://python-markdown.github.io/extensions/code_hilite/
+  [5]: https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/main/extensions/markdown/_admonition.scss
+  [6]: https://python-markdown.github.io/extensions/admonition/
+  [7]: https://python-markdown.github.io/extensions/attr_list/ 
+  [8]: https://caniuse.com/loading-lazy-attr
+  [9]: #alignment 
+  [10]: https://github.com/squidfunk/mkdocs-material/tree/master/material/.icons
+  [11]: #icons
+  [12]: https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/ 
   [17]: https://pygments.org/docs/lexers/
   [18]: https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#inlinehilite
