@@ -87,10 +87,11 @@ color:
   <button data-md-color-primary="blue-grey"><code>blue grey</code></button>
   <button data-md-color-primary="black"><code>black</code></button>
   <button data-md-color-primary="white"><code>white</code></button>
-  <button data-md-color-primary="iceberg_blue"><code>iceberg_blue </code></button>
+  <button data-md-color-primary="iceberg"><code>iceberg</code></button>
+  <button data-md-color-primary="custom_color"><code>custom_color</code></button>
 </div>
 <style>
-[data-md-color-primary="iceberg_blue"] {
+[data-md-color-primary="custom_color"] {
 --md-primary-fg-color: red
 }
 </style>
