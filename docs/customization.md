@@ -20,13 +20,14 @@ fit your brand's identity by using [CSS variables][2].
 
 Material for MkDocs supports two _color schemes_: a light mode, which is just
 called `default`, and a dark mode, which is called `slate`. The color scheme
-can be set via `mkdocs.yml`:
+can be set via `mkdocs.yml` to `preference`:
 
 ``` yaml hl_lines="3"
 theme:
   palette:
-    scheme: default
+    scheme: preference 
 ```
+  [3]: https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/palette/_scheme.scss
 
 :material-cursor-default-click-outline: Click on a tile to change the color
 scheme:
@@ -217,6 +218,66 @@ __in mkdocs.yml__
       - javascripts/extra.js
     ```
 
+
+### Custom colors
+
+[:octicons-file-code-24: Source][12] ·
+:octicons-mortar-board-24: Difficulty: _easy_
+
+Material for MkDocs implements colors using [CSS variables][13] (custom
+properties). If you want to customize the colors beyond the palette (e.g. to
+use your brand-specific colors), you can add an [additional stylesheet][14] and
+tweak the values of the CSS variables.
+
+Let's say you're :fontawesome-brands-youtube:{: style="color: #EE0F0F" }
+__YouTube__, and want to set the primary color to your brand's palette. Just
+add:
+
+``` css
+:root {
+  --md-primary-fg-color:        #EE0F0F;
+  --md-primary-fg-color--light: #ECB7B7;
+  --md-primary-fg-color--dark:  #90030C;
+}
+```
+
+See the file containing the [color definitions][12] for a list of all CSS
+variables.
+
+  [12]: https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/main/_colors.scss
+  [13]: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+  [14]: ../customization.md#additional-css
+
+
+### Custom color schemes
+
+[:octicons-file-code-24: Source][3] ·
+:octicons-mortar-board-24: Difficulty: _easy_
+
+Besides overriding specific colors, you can create your own, named color scheme
+by wrapping the definitions in the `#!css [data-md-color-scheme="..."]`
+[attribute selector][15], which you can then set via `mkdocs.yml` as described
+in the [color schemes][7] section:
+
+``` css
+[data-md-color-scheme="youtube"] {
+  --md-primary-fg-color:        #EE0F0F;
+  --md-primary-fg-color--light: #ECB7B7;
+  --md-primary-fg-color--dark:  #90030C;
+}
+```
+
+Additionally, the `slate` color scheme defines all of it's colors via `hsla`
+color functions and deduces its colors from the `--md-hue` CSS variable. You
+can tune the `slate` theme with:
+
+``` css
+[data-md-color-scheme="slate"] {
+  --md-hue: 210; /* [0, 360] */
+}
+```
+
+  [15]: https://www.w3.org/TR/selectors-4/#attribute-selectors
 ## Styling code blocks
 
 === "Python"

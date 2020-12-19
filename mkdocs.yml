@@ -6,7 +6,7 @@ theme:
   custom_dir: docs/theme
   palette:
     scheme: iceberg 
-    primary: iceberg_blue 
+    primary: iceberg 
     accent: blue  
   icon:
     repo: fontawesome/brands/github-alt
