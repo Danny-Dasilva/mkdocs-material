@@ -9,11 +9,12 @@
         <meta name="description" content="Quickly generate docs with markdown and deploy them">
       
       
+      
         <link rel="canonical" href="https://danny-dasilva.github.io/mkdocs-material/features/">
       
       
       <link rel="shortcut icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.5">
     
     
       
@@ -21,10 +22,14 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.bc7e593a.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.21aed14c.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab28b872.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
+        
+          
+          
+          <meta name="theme-color" content="">
         
       
     
@@ -59,7 +64,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="iceberg" data-md-color-primary="" data-md-color-accent="blue">
+    <body dir="ltr" data-md-color-scheme="iceberg" data-md-color-primary="iceberg" data-md-color-accent="blue">
       
   
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -135,7 +140,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -221,7 +226,7 @@
 
   <li class="md-nav__item">
     <a href=".." class="md-nav__link">
-      MkDocs
+      Setup
     </a>
   </li>
 
@@ -342,8 +347,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#allignment" class="md-nav__link">
-    Allignment
+  <a href="#alignment" class="md-nav__link">
+    Alignment
   </a>
   
 </li>
@@ -448,7 +453,7 @@
 
   <li class="md-nav__item">
     <a href="../customization/" class="md-nav__link">
-      Customization
+      Changing the colors
     </a>
   </li>
 
@@ -460,8 +465,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
     <label class="md-nav__link" for="nav-4">
       Example - Nested folder
       <span class="md-nav__icon md-icon"></span>
@@ -493,8 +497,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" >
     <label class="md-nav__link" for="nav-4-2">
       Sub folder
       <span class="md-nav__icon md-icon"></span>
@@ -634,8 +637,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#allignment" class="md-nav__link">
-    Allignment
+  <a href="#alignment" class="md-nav__link">
+    Alignment
   </a>
   
 </li>
@@ -743,7 +746,7 @@
                 
                 <h2 id="basics">Basics<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h2>
 <p>Ideally you have a basic understanding of markdown syntax however if you 
-need a refresher feel free to visit <a href="https://pygments.org">here</a>. The following are extra features
+need a refresher feel free to visit <a href="https://guides.github.com/features/mastering-markdown/">here</a>. The following are extra features
 built into mkdocs</p>
 <h2 id="bash-terminal">Bash terminal<a class="headerlink" href="#bash-terminal" title="Permanent link">&para;</a></h2>
 <p>Using <code>termynal.js</code> and <code>termynal.css</code> in <code>/docs/js</code> and <code>/docs/js</code> respectively we can show
@@ -778,7 +781,7 @@ INFO:     Application startup complete.
 <h2 id="code-blocks">Code Blocks<a class="headerlink" href="#code-blocks" title="Permanent link">&para;</a></h2>
 <p><a href="https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/main/extensions/pymdownx/_highlight.scss"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 012-2h9.982a2 2 0 011.414.586l4.018 4.018A2 2 0 0121 7.018V21a2 2 0 01-2 2H4.75a.75.75 0 010-1.5H19a.5.5 0 00.5-.5V8.5h-4a2 2 0 01-2-2v-4H5a.5.5 0 00-.5.5v6.25a.75.75 0 01-1.5 0V3zm12-.5v4a.5.5 0 00.5.5h4a.5.5 0 00-.146-.336l-4.018-4.018A.5.5 0 0015 2.5z"/><path d="M4.53 12.24a.75.75 0 01-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 11-1.022 1.1l-3.23-3a.75.75 0 010-1.1l3.23-3a.75.75 0 011.06.04zm3.979 1.06a.75.75 0 111.02-1.1l3.231 3a.75.75 0 010 1.1l-3.23 3a.75.75 0 11-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> Source</a> · <a href="https://facelessuser.github.io/pymdown-extensions/extensions/highlight/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M1 3a2 2 0 012-2h6.5a2 2 0 012 2v6.5a2 2 0 01-2 2H7v4.063C7 16.355 7.644 17 8.438 17H12.5v-2.5a2 2 0 012-2H21a2 2 0 012 2V21a2 2 0 01-2 2h-6.5a2 2 0 01-2-2v-2.5H8.437A2.938 2.938 0 015.5 15.562V11.5H3a2 2 0 01-2-2V3zm2-.5a.5.5 0 00-.5.5v6.5a.5.5 0 00.5.5h6.5a.5.5 0 00.5-.5V3a.5.5 0 00-.5-.5H3zM14.5 14a.5.5 0 00-.5.5V21a.5.5 0 00.5.5H21a.5.5 0 00.5-.5v-6.5a.5.5 0 00-.5-.5h-6.5z"/></svg></span> Extension</a> ·
 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M16.168 2.924L4.51 13.061a.25.25 0 00.164.439h5.45a.75.75 0 01.692 1.041l-2.559 6.066 11.215-9.668a.25.25 0 00-.164-.439H14a.75.75 0 01-.687-1.05l2.855-6.526zm-.452-1.595a1.341 1.341 0 012.109 1.55L15.147 9h4.161c1.623 0 2.372 2.016 1.143 3.075L8.102 22.721a1.149 1.149 0 01-1.81-1.317L8.996 15H4.674c-1.619 0-2.37-2.008-1.148-3.07l12.19-10.6z"/></svg></span> Supersedes: <a href="https://python-markdown.github.io/extensions/code_hilite/">CodeHilite</a></p>
-<p>The <a href="https://facelessuser.github.io/pymdown-extensions/extensions/highlight/">Highlight</a> extension, which is part of [Python Markdown Extensions][5],
+<p>The <a href="https://facelessuser.github.io/pymdown-extensions/extensions/highlight/">Highlight</a> extension, which is part of <a href="https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/main/extensions/markdown/_admonition.scss">Python Markdown Extensions</a>,
 integrates with Material for MkDocs and provides several options for
 configuring syntax highlighting of code blocks, to see how to set up and configure this
 see the <a href="https://squidfunk.github.io/mkdocs-material/reference/code-blocks/" class="external-link" target="_blank">mkdocs-material documentation</a> </p>
@@ -874,12 +877,12 @@ the short language name <a href="https://pygments.org/docs/lexers/">17</a>.</p>
 <p>The <code class="highlight"><span class="nb">range</span><span class="p">()</span></code> function is used to generate a sequence of numbers.</p>
 </details>
 <h2 id="admonitions">Admonitions<a class="headerlink" href="#admonitions" title="Permanent link">&para;</a></h2>
-<p><a href="https://pygments.org"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 012-2h9.982a2 2 0 011.414.586l4.018 4.018A2 2 0 0121 7.018V21a2 2 0 01-2 2H4.75a.75.75 0 010-1.5H19a.5.5 0 00.5-.5V8.5h-4a2 2 0 01-2-2v-4H5a.5.5 0 00-.5.5v6.25a.75.75 0 01-1.5 0V3zm12-.5v4a.5.5 0 00.5.5h4a.5.5 0 00-.146-.336l-4.018-4.018A.5.5 0 0015 2.5z"/><path d="M4.53 12.24a.75.75 0 01-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 11-1.022 1.1l-3.23-3a.75.75 0 010-1.1l3.23-3a.75.75 0 011.06.04zm3.979 1.06a.75.75 0 111.02-1.1l3.231 3a.75.75 0 010 1.1l-3.23 3a.75.75 0 11-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> Source</a> · <a href="https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/main/extensions/pymdownx/_highlight.scss"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M1 3a2 2 0 012-2h6.5a2 2 0 012 2v6.5a2 2 0 01-2 2H7v4.063C7 16.355 7.644 17 8.438 17H12.5v-2.5a2 2 0 012-2H21a2 2 0 012 2V21a2 2 0 01-2 2h-6.5a2 2 0 01-2-2v-2.5H8.437A2.938 2.938 0 015.5 15.562V11.5H3a2 2 0 01-2-2V3zm2-.5a.5.5 0 00-.5.5v6.5a.5.5 0 00.5.5h6.5a.5.5 0 00.5-.5V3a.5.5 0 00-.5-.5H3zM14.5 14a.5.5 0 00-.5.5V21a.5.5 0 00.5.5H21a.5.5 0 00.5-.5v-6.5a.5.5 0 00-.5-.5h-6.5z"/></svg></span> Extension</a></p>
+<p><a href="https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/main/extensions/markdown/_admonition.scss"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 012-2h9.982a2 2 0 011.414.586l4.018 4.018A2 2 0 0121 7.018V21a2 2 0 01-2 2H4.75a.75.75 0 010-1.5H19a.5.5 0 00.5-.5V8.5h-4a2 2 0 01-2-2v-4H5a.5.5 0 00-.5.5v6.25a.75.75 0 01-1.5 0V3zm12-.5v4a.5.5 0 00.5.5h4a.5.5 0 00-.146-.336l-4.018-4.018A.5.5 0 0015 2.5z"/><path d="M4.53 12.24a.75.75 0 01-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 11-1.022 1.1l-3.23-3a.75.75 0 010-1.1l3.23-3a.75.75 0 011.06.04zm3.979 1.06a.75.75 0 111.02-1.1l3.231 3a.75.75 0 010 1.1l-3.23 3a.75.75 0 11-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> Source</a> · <a href="https://python-markdown.github.io/extensions/admonition/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M1 3a2 2 0 012-2h6.5a2 2 0 012 2v6.5a2 2 0 01-2 2H7v4.063C7 16.355 7.644 17 8.438 17H12.5v-2.5a2 2 0 012-2H21a2 2 0 012 2V21a2 2 0 01-2 2h-6.5a2 2 0 01-2-2v-2.5H8.437A2.938 2.938 0 015.5 15.562V11.5H3a2 2 0 01-2-2V3zm2-.5a.5.5 0 00-.5.5v6.5a.5.5 0 00.5.5h6.5a.5.5 0 00.5-.5V3a.5.5 0 00-.5-.5H3zM14.5 14a.5.5 0 00-.5.5V21a.5.5 0 00.5.5H21a.5.5 0 00.5-.5v-6.5a.5.5 0 00-.5-.5h-6.5z"/></svg></span> Extension</a></p>
 <p>Admonitions, also known as call-outs, are an devent choice for including side content without significantly interrupting the document flow. 
 Material for MkDocs provides several different types of admonitions and allows for the inclusion and nesting of arbitrary content. A
 details block follows the syntax and semantics of admonition blocks, but must start with <code>???</code>. The <code>???</code> can then be followed by a
 admonition type e.g. <code>example</code> 
-<a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/" class="external-link" target="_blank">(view supported types)</a>. </p>
+<a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types" class="external-link" target="_blank">(view supported types)</a>. </p>
 <h3 id="collapsed-blocks">Collapsed Blocks<a class="headerlink" href="#collapsed-blocks" title="Permanent link">&para;</a></h3>
 <p><em>Example</em>:</p>
 <div class="highlight"><pre><span></span><code>??? example 
@@ -894,7 +897,7 @@ massa, nec semper lorem quam in massa.</p>
 </details>
 <h3 id="open-blocks">Open blocks<a class="headerlink" href="#open-blocks" title="Permanent link">&para;</a></h3>
 <p>You can add a <code>"title"</code> by adding quotations after your supported admonition type
-<a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/" class="external-link" target="_blank">(view supported types)</a>. 
+<a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types" class="external-link" target="_blank">(view supported types)</a>. 
 Adding a <code>+</code> after <code>???</code> will render the block as open on page load:</p>
 <p><em>Example</em>:</p>
 <div class="highlight"><pre><span></span><code>???+ note &quot;Example Title&quot;
@@ -925,10 +928,10 @@ massa, nec semper lorem quam in massa.</p>
 </details>
 <h2 id="images">Images<a class="headerlink" href="#images" title="Permanent link">&para;</a></h2>
 <p>You can add images using the following syntax <code>![Placeholder_text](path/to/img.jpg)</code>.
-You can add images in the <code>docs/img</code> folder and reference them in markdown. When the <a href="https://facelessuser.github.io/pymdown-extensions/extensions/highlight/">Attribute List</a> extension is enabled, 
+You can add images in the <code>docs/img</code> folder and reference them in markdown. When the <a href="https://python-markdown.github.io/extensions/attr_list/">Attribute List</a> extension is enabled, 
 images can be aligned by adding the respective alignment directions via the <code>align</code> attribute, i.e.
 <code>align=left</code> or <code>align=right</code>. Along with this you can assign width with the syntax <code>width=200</code>.</p>
-<h3 id="allignment">Allignment<a class="headerlink" href="#allignment" title="Permanent link">&para;</a></h3>
+<h3 id="alignment">Alignment<a class="headerlink" href="#alignment" title="Permanent link">&para;</a></h3>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Left</label><div class="tabbed-content">
 <p><em>Example</em>:</p>
 <div class="highlight"><pre><span></span><code>![Placeholder](img/example.png){: align=left width=300 }
@@ -967,9 +970,9 @@ but it's always possible to resort to HTML. Using <code>figure</code> and <code>
   <figcaption>Image caption</figcaption>
 </figure>
 
-<details class="tip"><summary>Image lazy-loading</summary><p>Modern browsers provide <a href="https://python-markdown.github.io/extensions/code_hilite/">native support for lazy-loading images</a> through the
+<details class="tip"><summary>Image lazy-loading</summary><p>Modern browsers provide <a href="https://caniuse.com/loading-lazy-attr">native support for lazy-loading images</a> through the
 <code>loading</code> attribute, which degrades to eager-loading in browsers without
-support. As with [image alignment][5], if the <a href="https://facelessuser.github.io/pymdown-extensions/extensions/highlight/">Attribute List</a> extension is
+support. As with <a href="#alignment">image alignment</a>, if the <a href="https://python-markdown.github.io/extensions/attr_list/">Attribute List</a> extension is
 enabled, images can be lazy-loaded by adding <code>loading=lazy</code>.</p>
 <p><em>Example</em>:</p>
 <div class="highlight"><pre><span></span><code>![Placeholder](https://dummyimage.com/600x400/eee/aaa){: loading=lazy }
@@ -1054,7 +1057,7 @@ the short language name <a href="https://pygments.org/docs/lexers/">17</a>.</p>
 </div>
 </details>
 <h2 id="icons">Icons<a class="headerlink" href="#icons" title="Permanent link">&para;</a></h2>
-<p>Material for mkdocs supports more than 7,000 icons<a href="#tasklist">7</a> and 
+<p>Material for mkdocs supports <a href="https://python-markdown.github.io/extensions/attr_list/">more than 7,000 icons</a> and 
 thousands of emojis with very little effort. Material design,
 font awesome and octicons icons are supported</p>
 <p>Emojis and Icons can be integrated in Markdown by putting the shortcode of the emoji
@@ -1076,7 +1079,7 @@ between two colons. To see how to add custom css rules to Icons as well as custo
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.326 1.973a1.2 1.2 0 011.49-.832c.387.112.977.307 1.575.602.586.291 1.243.71 1.7 1.296.022.027.042.056.061.084A13.22 13.22 0 018 3c.67 0 1.289.037 1.861.108l.051-.07c.457-.586 1.114-1.004 1.7-1.295a9.654 9.654 0 011.576-.602 1.2 1.2 0 011.49.832c.14.493.356 1.347.479 2.29.079.604.123 1.28.07 1.936.541.977.773 2.11.773 3.301C16 13 14.5 15 8 15s-8-2-8-5.5c0-1.034.238-2.128.795-3.117-.08-.712-.034-1.46.052-2.12.122-.943.34-1.797.479-2.29zM8 13.065c6 0 6.5-2 6-4.27C13.363 5.905 11.25 5 8 5s-5.363.904-6 3.796c-.5 2.27 0 4.27 6 4.27z"/><path d="M4 8a1 1 0 012 0v1a1 1 0 01-2 0V8zm2.078 2.492c-.083-.264.146-.492.422-.492h3c.276 0 .505.228.422.492C9.67 11.304 8.834 12 8 12c-.834 0-1.669-.696-1.922-1.508zM10 8a1 1 0 112 0v1a1 1 0 11-2 0V8z"/></svg></span> – <code>.icons/octicons/octoface-16.svg</code></p>
 <h2 id="data-tables">Data tables<a class="headerlink" href="#data-tables" title="Permanent link">&para;</a></h2>
 <p>Data tables can be used at any position in your project documentation and can
-contain arbitrary Markdown, including inline code blocks, as well as <a href="https://facelessuser.github.io/pymdown-extensions/extensions/highlight/">icons and
+contain arbitrary Markdown, including inline code blocks, as well as <a href="#icons">icons and
 emojis</a>.</p>
 <p><em>Example</em>:</p>
 <div class="highlight"><pre><span></span><code>| Method      | Description                          |
@@ -1109,7 +1112,7 @@ emojis</a>.</p>
 </tbody>
 </table>
 <h2 id="tasklists">Tasklists<a class="headerlink" href="#tasklists" title="Permanent link">&para;</a></h2>
-<p>When the <a href="#tasklist">Tasklist</a> extension is enabled, unordered list items can be
+<p>When the <a href="https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/">Tasklist</a> extension is enabled, unordered list items can be
 prefixed with <code>[ ]</code> to render an unchecked or <code>[x]</code> to render a checked
 checkbox. Along with normal markdown lists which can be prefficed with <code>*</code>
 or <code>1.</code> tasklists provide you a way of annotating completed tasks.</p>
@@ -1146,7 +1149,7 @@ Lorem ipsum[1] dolor sit amet, consectetur adipiscing elit[2].
 </code></pre></div>
 <p><em>Result</em>:</p>
 <p>Lorem ipsum<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> dolor sit amet, consectetur adipiscing elit.[^2]</p>
-<p>Lorem <a href="https://pygments.org">ipsum</a> dolor sit amet, consectetur adipiscing <a href="https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/main/extensions/pymdownx/_highlight.scss">elit</a>.</p>
+<p>Lorem <a href="https://guides.github.com/features/mastering-markdown/">ipsum</a> dolor sit amet, consectetur adipiscing <a href="https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/main/extensions/pymdownx/_highlight.scss">elit</a>.</p>
 <h3 id="adding-footnote-content">Adding footnote content<a class="headerlink" href="#adding-footnote-content" title="Permanent link">&para;</a></h3>
 <p>The footnote content must be declared with the same identifier as the reference.
 It can be inserted at an arbitrary position in the document and is always
@@ -1197,7 +1200,7 @@ reference is automatically added.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                MkDocs
+                Setup
               </div>
             </div>
           </a>
@@ -1209,7 +1212,7 @@ reference is automatically added.</p>
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Customization
+                Changing the colors
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -1285,8 +1288,8 @@ reference is automatically added.</p>
       
     </div>
     
-      <script src="../assets/javascripts/vendor.6a3d08fc.min.js"></script>
-      <script src="../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../assets/javascripts/bundle.b3a72adc.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

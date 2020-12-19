@@ -9,11 +9,12 @@
         <meta name="description" content="Quickly generate docs with markdown and deploy them">
       
       
+      
         <link rel="canonical" href="https://danny-dasilva.github.io/mkdocs-material/">
       
       
       <link rel="shortcut icon" href="img/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.5">
     
     
       
@@ -21,10 +22,14 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.bc7e593a.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.21aed14c.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab28b872.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.196e0c26.min.css">
+        
+          
+          
+          <meta name="theme-color" content="">
         
       
     
@@ -59,7 +64,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="iceberg" data-md-color-primary="" data-md-color-accent="blue">
+    <body dir="ltr" data-md-color-scheme="iceberg" data-md-color-primary="iceberg" data-md-color-accent="blue">
       
   
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -101,7 +106,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              MkDocs
+              Setup
             
           </span>
         </div>
@@ -135,7 +140,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -227,12 +232,12 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        MkDocs
+        Setup
         <span class="md-nav__icon md-icon"></span>
       </label>
     
     <a href="." class="md-nav__link md-nav__link--active">
-      MkDocs
+      Setup
     </a>
     
       
@@ -340,7 +345,7 @@
 
   <li class="md-nav__item">
     <a href="customization/" class="md-nav__link">
-      Customization
+      Changing the colors
     </a>
   </li>
 
@@ -352,8 +357,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
     <label class="md-nav__link" for="nav-4">
       Example - Nested folder
       <span class="md-nav__icon md-icon"></span>
@@ -385,8 +389,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" >
     <label class="md-nav__link" for="nav-4-2">
       Sub folder
       <span class="md-nav__icon md-icon"></span>
@@ -523,7 +526,7 @@
               
                 
                 
-                  <h1>MkDocs</h1>
+                  <h1>Setup</h1>
                 
                 <h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
 <p>Begin by cloning the repo and pathing into it</p>
@@ -535,12 +538,8 @@
 <div class="highlight"><pre><span></span><code>pip install pipenv
 </code></pre></div>
 <p>Install dependencies with </p>
-<div class="termy">
-<p><div class="highlight"><pre><span></span><code><span class="gp">$</span> pipenv install
-
-<span class="go">---&gt; 100%</span>
+<div class="highlight"><pre><span></span><code><span class="go">pipenv install</span>
 </code></pre></div>
-</div></p>
 <details class="danger"><summary>Warning: Your Pipfile requires python_version 3.8</summary><p>This pipenv file was created using python <code>3.8</code> however it is not a requirement to run the package. You can tack 
 on <code>--python &lt;$your version&gt;</code> to pipenv in order to run it with that python version. </p>
 <p><strong>Example</strong>:</p>
@@ -549,13 +548,9 @@ on <code>--python &lt;$your version&gt;</code> to pipenv in order to run it with
 </details>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">docker</label><div class="tabbed-content">
-<p>The [Docker image][1] is a great way to get up and running in a few minutes, as it comes with all dependencies pre-installed. Pull the image for the latest version with:</p>
-<div class="termy">
-<p><div class="highlight"><pre><span></span><code><span class="gp">$</span> docker pull dannydasilva/mkdocs-material
-
-<span class="go">---&gt; 100%</span>
+<p>The <a href="https://pages.github.com/">Docker image</a> is a great way to get up and running in a few minutes, as it comes with all dependencies pre-installed. Pull the image for the latest version with:</p>
+<div class="highlight"><pre><span></span><code><span class="go">docker pull dannydasilva/mkdocs-material</span>
 </code></pre></div>
- </div></p>
 <p>The mkdocs executable is provided as an entry point and serve is the default command. 
 If you're not familiar with Docker don't worry, the following sections cover how to serve build and deploy.</p>
 <p>The following plugins are bundled with the Docker image:</p>
@@ -698,8 +693,9 @@ The server will automatically rebuild upon saving. By default the server will be
 <h3 id="build">Build<a class="headerlink" href="#build" title="Permanent link">&para;</a></h3>
 <p>When you're finished editing, you can build a static site from your Markdown files with:</p>
 <div class="tabbed-set" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">pipenv</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>pipenv run mkdocs serve
-</code></pre></div>
+<p>Build Documentation
+<div class="highlight"><pre><span></span><code>pipenv run mkdocs build 
+</code></pre></div></p>
 </div>
 <input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">docker</label><div class="tabbed-content">
 <p>Build Documentation
@@ -713,7 +709,7 @@ The server will automatically rebuild upon saving. By default the server will be
 </div>
 </div>
 <h3 id="deploy">Deploy<a class="headerlink" href="#deploy" title="Permanent link">&para;</a></h3>
-<p>If you're already hosting your code on GitHub, [GitHub Pages][5] is certainly the most convenient 
+<p>If you're already hosting your code on GitHub, <a href="https://pages.github.com/">GitHub Pages</a> is certainly the most convenient 
 way to publish your project documentation. It's free of charge and pretty easy to set up.</p>
 <div class="tabbed-set" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">pipenv</label><div class="tabbed-content">
 <p>deploy to gihub pages with:
@@ -724,7 +720,8 @@ Your documentation should shortly appear at
 </div>
 <input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">docker</label><div class="tabbed-content">
 <p>Deploy documentation to GitHub Pages</p>
-<p><code>docker run --rm -it -v ~/.ssh:/root/.ssh -v ${PWD}:/docs dannydasilva/mkdocs-material gh-deploy</code></p>
+<div class="highlight"><pre><span></span><code>docker run --rm -it -v ~/.ssh:/root/.ssh -v ${PWD}:/docs dannydasilva/mkdocs-material gh-deploy 
+</code></pre></div>
 <p>Your documentation should shortly appear at <code>&lt;$username&gt;.github.io/&lt;$your_github_repository&gt;</code>.</p>
 </div>
 <input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><label for="__tabbed_5_3">virtualenv or pip</label><div class="tabbed-content">
@@ -835,8 +832,8 @@ Your documentation should shortly appear at <code>&lt;$username&gt;.github.io/&l
       
     </div>
     
-      <script src="assets/javascripts/vendor.6a3d08fc.min.js"></script>
-      <script src="assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="assets/javascripts/bundle.b3a72adc.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

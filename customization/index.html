@@ -9,22 +9,27 @@
         <meta name="description" content="Quickly generate docs with markdown and deploy them">
       
       
+      
         <link rel="canonical" href="https://danny-dasilva.github.io/mkdocs-material/customization/">
       
       
       <link rel="shortcut icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.5">
     
     
       
-        <title>Customization - Doc Generator</title>
+        <title>Changing the colors - Doc Generator</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.bc7e593a.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.21aed14c.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab28b872.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
+        
+          
+          
+          <meta name="theme-color" content="">
         
       
     
@@ -59,7 +64,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="iceberg" data-md-color-primary="" data-md-color-accent="blue">
+    <body dir="ltr" data-md-color-scheme="iceberg" data-md-color-primary="iceberg" data-md-color-accent="blue">
       
   
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -68,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#colors" class="md-skip">
+        <a href="#changing-the-colors" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +106,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Customization
+              Changing the colors
             
           </span>
         </div>
@@ -135,7 +140,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -221,7 +226,7 @@
 
   <li class="md-nav__item">
     <a href=".." class="md-nav__link">
-      MkDocs
+      Setup
     </a>
   </li>
 
@@ -249,19 +254,23 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Customization
+        Changing the colors
         <span class="md-nav__icon md-icon"></span>
       </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
-      Customization
+      Changing the colors
     </a>
     
       
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -271,9 +280,56 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#colors" class="md-nav__link">
-    Colors
+  <a href="#configuration" class="md-nav__link">
+    Configuration
   </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#color-palette" class="md-nav__link">
+    Color palette
+  </a>
+  
+    <nav class="md-nav" aria-label="Color palette">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#color-scheme" class="md-nav__link">
+    Color scheme
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primary-color" class="md-nav__link">
+    Primary color
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accent-color" class="md-nav__link">
+    Accent color
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-css" class="md-nav__link">
+    custom css
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -288,6 +344,26 @@
   <a href="#additional-css-and-javascript" class="md-nav__link">
     Additional CSS and Javascript
   </a>
+  
+    <nav class="md-nav" aria-label="Additional CSS and Javascript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-colors" class="md-nav__link">
+    Custom colors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-color-schemes" class="md-nav__link">
+    Custom color schemes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -312,8 +388,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
     <label class="md-nav__link" for="nav-4">
       Example - Nested folder
       <span class="md-nav__icon md-icon"></span>
@@ -345,8 +420,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" >
     <label class="md-nav__link" for="nav-4-2">
       Sub folder
       <span class="md-nav__icon md-icon"></span>
@@ -395,6 +469,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -403,9 +479,56 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#colors" class="md-nav__link">
-    Colors
+  <a href="#configuration" class="md-nav__link">
+    Configuration
   </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#color-palette" class="md-nav__link">
+    Color palette
+  </a>
+  
+    <nav class="md-nav" aria-label="Color palette">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#color-scheme" class="md-nav__link">
+    Color scheme
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primary-color" class="md-nav__link">
+    Primary color
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accent-color" class="md-nav__link">
+    Accent color
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-css" class="md-nav__link">
+    custom css
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -420,6 +543,26 @@
   <a href="#additional-css-and-javascript" class="md-nav__link">
     Additional CSS and Javascript
   </a>
+  
+    <nav class="md-nav" aria-label="Additional CSS and Javascript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-colors" class="md-nav__link">
+    Custom colors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-color-schemes" class="md-nav__link">
+    Custom color schemes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -443,10 +586,154 @@
               
                 
                 
-                  <h1>Customization</h1>
-                
-                <h2 id="colors">Colors<a class="headerlink" href="#colors" title="Permanent link">&para;</a></h2>
+                <h1 id="changing-the-colors">Changing the colors<a class="headerlink" href="#changing-the-colors" title="Permanent link">&para;</a></h1>
+<p>As any proper Material Design implementation, Material for MkDocs supports
+Google's original <a href="http://www.materialui.co/colors">color palette</a>, which can be easily configured through 
+<code>mkdocs.yml</code>. Furthermore, colors can be customized with a few lines of CSS to
+fit your brand's identity by using <a href="#custom-colors">CSS variables</a>.</p>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
+<h3 id="color-palette">Color palette<a class="headerlink" href="#color-palette" title="Permanent link">&para;</a></h3>
+<h4 id="color-scheme">Color scheme<a class="headerlink" href="#color-scheme" title="Permanent link">&para;</a></h4>
+<p><a href="https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/palette/_scheme.scss"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 012-2h9.982a2 2 0 011.414.586l4.018 4.018A2 2 0 0121 7.018V21a2 2 0 01-2 2H4.75a.75.75 0 010-1.5H19a.5.5 0 00.5-.5V8.5h-4a2 2 0 01-2-2v-4H5a.5.5 0 00-.5.5v6.25a.75.75 0 01-1.5 0V3zm12-.5v4a.5.5 0 00.5.5h4a.5.5 0 00-.146-.336l-4.018-4.018A.5.5 0 0015 2.5z"/><path d="M4.53 12.24a.75.75 0 01-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 11-1.022 1.1l-3.23-3a.75.75 0 010-1.1l3.23-3a.75.75 0 011.06.04zm3.979 1.06a.75.75 0 111.02-1.1l3.231 3a.75.75 0 010 1.1l-3.23 3a.75.75 0 11-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> Source</a> · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M11.75 1a.75.75 0 01.75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 010 2.65l-3.187 2.75a1.75 1.75 0 01-1.143.425H12.5v9.25a.75.75 0 01-1.5 0V13H3.75A1.75 1.75 0 012 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 01.75-.75zm0 4.5h7.282a.25.25 0 01.163.06l3.188 2.75a.25.25 0 010 .38l-3.188 2.75a.25.25 0 01-.163.06H3.75a.25.25 0 01-.25-.25v-5.5a.25.25 0 01.25-.25h8z"/></svg></span> Default: <code>default</code></p>
+<p>Material for MkDocs supports two <em>color schemes</em>: a light mode, which is just
+called <code>default</code>, and a dark mode, which is called <code>slate</code>. The color scheme
+can be set via <code>mkdocs.yml</code> to <code>preference</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">theme</span><span class="p">:</span>
+  <span class="nt">palette</span><span class="p">:</span>
+<span class="hll">    <span class="nt">scheme</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">preference</span> 
+</span></code></pre></div>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.5 11l6.38 5.37-.88.18-.64.12c-.63.13-.99.83-.71 1.4l.27.58 1.36 2.94-1.42.66-1.36-2.93-.26-.58a.985.985 0 00-1.52-.36l-.51.4-.71.57V11m-.74-2.31a.76.76 0 00-.76.76V20.9c0 .42.34.76.76.76.19 0 .35-.06.48-.16l1.91-1.55 1.66 3.62c.13.27.4.43.69.43.11 0 .22 0 .33-.08l2.76-1.28c.38-.18.56-.64.36-1.01L17.28 18l2.41-.45a.88.88 0 00.43-.26c.27-.32.23-.79-.12-1.08l-8.74-7.35-.01.01a.756.756 0 00-.49-.18M15 10V8h5v2h-5m-1.17-5.24l2.83-2.83 1.41 1.41-2.83 2.83-1.41-1.41M10 0h2v5h-2V0M3.93 14.66l2.83-2.83 1.41 1.41-2.83 2.83-1.41-1.41m0-11.32l1.41-1.41 2.83 2.83-1.41 1.41-2.83-2.83M7 10H2V8h5v2"/></svg></span> Click on a tile to change the color
+scheme:</p>
+<div class="tx-switch">
+  <button data-md-color-scheme="default"><code>default</code></button>
+  <button data-md-color-scheme="slate"><code>slate</code></button>
+  <button data-md-color-scheme="iceberg"><code>iceberg</code></button>
+</div>
+
+<script>
+  var buttons = document.querySelectorAll("button[data-md-color-scheme]")
+  buttons.forEach(function(button) {
+    button.addEventListener("click", function() {
+      var attr = this.getAttribute("data-md-color-scheme")
+      document.body.setAttribute("data-md-color-scheme", attr)
+      var name = document.querySelector("#__code_0 code span:nth-child(7)")
+      name.textContent = attr
+    })
+  })
+</script>
+<h4 id="primary-color">Primary color<a class="headerlink" href="#primary-color" title="Permanent link">&para;</a></h4>
+<p><a href="https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/palette/_primary.scss"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 012-2h9.982a2 2 0 011.414.586l4.018 4.018A2 2 0 0121 7.018V21a2 2 0 01-2 2H4.75a.75.75 0 010-1.5H19a.5.5 0 00.5-.5V8.5h-4a2 2 0 01-2-2v-4H5a.5.5 0 00-.5.5v6.25a.75.75 0 01-1.5 0V3zm12-.5v4a.5.5 0 00.5.5h4a.5.5 0 00-.146-.336l-4.018-4.018A.5.5 0 0015 2.5z"/><path d="M4.53 12.24a.75.75 0 01-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 11-1.022 1.1l-3.23-3a.75.75 0 010-1.1l3.23-3a.75.75 0 011.06.04zm3.979 1.06a.75.75 0 111.02-1.1l3.231 3a.75.75 0 010 1.1l-3.23 3a.75.75 0 11-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> Source</a> · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M11.75 1a.75.75 0 01.75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 010 2.65l-3.187 2.75a1.75 1.75 0 01-1.143.425H12.5v9.25a.75.75 0 01-1.5 0V13H3.75A1.75 1.75 0 012 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 01.75-.75zm0 4.5h7.282a.25.25 0 01.163.06l3.188 2.75a.25.25 0 010 .38l-3.188 2.75a.25.25 0 01-.163.06H3.75a.25.25 0 01-.25-.25v-5.5a.25.25 0 01.25-.25h8z"/></svg></span> Default: <code>indigo</code></p>
+<p>The <em>primary color</em> is used for the header, the sidebar, text links and several
+other components. In order to change the primary color, set the following value
+in <code>mkdocs.yml</code> to a valid color name:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">theme</span><span class="p">:</span>
+  <span class="nt">palette</span><span class="p">:</span>
+<span class="hll">    <span class="nt">primary</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">indigo</span>
+</span></code></pre></div>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.5 11l6.38 5.37-.88.18-.64.12c-.63.13-.99.83-.71 1.4l.27.58 1.36 2.94-1.42.66-1.36-2.93-.26-.58a.985.985 0 00-1.52-.36l-.51.4-.71.57V11m-.74-2.31a.76.76 0 00-.76.76V20.9c0 .42.34.76.76.76.19 0 .35-.06.48-.16l1.91-1.55 1.66 3.62c.13.27.4.43.69.43.11 0 .22 0 .33-.08l2.76-1.28c.38-.18.56-.64.36-1.01L17.28 18l2.41-.45a.88.88 0 00.43-.26c.27-.32.23-.79-.12-1.08l-8.74-7.35-.01.01a.756.756 0 00-.49-.18M15 10V8h5v2h-5m-1.17-5.24l2.83-2.83 1.41 1.41-2.83 2.83-1.41-1.41M10 0h2v5h-2V0M3.93 14.66l2.83-2.83 1.41 1.41-2.83 2.83-1.41-1.41m0-11.32l1.41-1.41 2.83 2.83-1.41 1.41-2.83-2.83M7 10H2V8h5v2"/></svg></span> Click on a tile to change the primary
+color:</p>
+<div class="tx-switch">
+  <button data-md-color-primary="red"><code>red</code></button>
+  <button data-md-color-primary="pink"><code>pink</code></button>
+  <button data-md-color-primary="purple"><code>purple</code></button>
+  <button data-md-color-primary="deep-purple"><code>deep purple</code></button>
+  <button data-md-color-primary="indigo"><code>indigo</code></button>
+  <button data-md-color-primary="blue"><code>blue</code></button>
+  <button data-md-color-primary="light-blue"><code>light blue</code></button>
+  <button data-md-color-primary="cyan"><code>cyan</code></button>
+  <button data-md-color-primary="teal"><code>teal</code></button>
+  <button data-md-color-primary="green"><code>green</code></button>
+  <button data-md-color-primary="light-green"><code>light green</code></button>
+  <button data-md-color-primary="lime"><code>lime</code></button>
+  <button data-md-color-primary="yellow"><code>yellow</code></button>
+  <button data-md-color-primary="amber"><code>amber</code></button>
+  <button data-md-color-primary="orange"><code>orange</code></button>
+  <button data-md-color-primary="deep-orange"><code>deep orange</code></button>
+  <button data-md-color-primary="brown"><code>brown</code></button>
+  <button data-md-color-primary="grey"><code>grey</code></button>
+  <button data-md-color-primary="blue-grey"><code>blue grey</code></button>
+  <button data-md-color-primary="black"><code>black</code></button>
+  <button data-md-color-primary="white"><code>white</code></button>
+  <button data-md-color-primary="iceberg"><code>iceberg</code></button>
+  <button data-md-color-primary="custom_color"><code>custom_color</code></button>
+</div>
+<style>
+[data-md-color-primary="custom_color"] {
+--md-primary-fg-color: red
+}
+</style>
+<script>
+  var buttons = document.querySelectorAll("button[data-md-color-primary]")
+  buttons.forEach(function(button) {
+    button.addEventListener("click", function() {
+      var attr = this.getAttribute("data-md-color-primary")
+      document.body.setAttribute("data-md-color-primary", attr)
+      var name = document.querySelector("#__code_2 code span:nth-child(7)")
+      name.textContent = attr.replace("-", " ")
+    })
+  })
+</script>
+
+<h4 id="accent-color">Accent color<a class="headerlink" href="#accent-color" title="Permanent link">&para;</a></h4>
+<p><a href="https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/palette/_accent.scss"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 012-2h9.982a2 2 0 011.414.586l4.018 4.018A2 2 0 0121 7.018V21a2 2 0 01-2 2H4.75a.75.75 0 010-1.5H19a.5.5 0 00.5-.5V8.5h-4a2 2 0 01-2-2v-4H5a.5.5 0 00-.5.5v6.25a.75.75 0 01-1.5 0V3zm12-.5v4a.5.5 0 00.5.5h4a.5.5 0 00-.146-.336l-4.018-4.018A.5.5 0 0015 2.5z"/><path d="M4.53 12.24a.75.75 0 01-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 11-1.022 1.1l-3.23-3a.75.75 0 010-1.1l3.23-3a.75.75 0 011.06.04zm3.979 1.06a.75.75 0 111.02-1.1l3.231 3a.75.75 0 010 1.1l-3.23 3a.75.75 0 11-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> Source</a> · <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M11.75 1a.75.75 0 01.75.75V4h6.532c.42 0 .826.15 1.143.425l3.187 2.75a1.75 1.75 0 010 2.65l-3.187 2.75a1.75 1.75 0 01-1.143.425H12.5v9.25a.75.75 0 01-1.5 0V13H3.75A1.75 1.75 0 012 11.25v-5.5C2 4.783 2.784 4 3.75 4H11V1.75a.75.75 0 01.75-.75zm0 4.5h7.282a.25.25 0 01.163.06l3.188 2.75a.25.25 0 010 .38l-3.188 2.75a.25.25 0 01-.163.06H3.75a.25.25 0 01-.25-.25v-5.5a.25.25 0 01.25-.25h8z"/></svg></span> Default: <code>indigo</code></p>
+<p>The <em>accent color</em> is used to denote elements that can be interacted with, e.g.
+hovered links, buttons and scrollbars. It can be changed in <code>mkdocs.yml</code> by
+choosing a valid color name:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">theme</span><span class="p">:</span>
+  <span class="nt">palette</span><span class="p">:</span>
+<span class="hll">    <span class="nt">accent</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">indigo</span>
+</span></code></pre></div>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.5 11l6.38 5.37-.88.18-.64.12c-.63.13-.99.83-.71 1.4l.27.58 1.36 2.94-1.42.66-1.36-2.93-.26-.58a.985.985 0 00-1.52-.36l-.51.4-.71.57V11m-.74-2.31a.76.76 0 00-.76.76V20.9c0 .42.34.76.76.76.19 0 .35-.06.48-.16l1.91-1.55 1.66 3.62c.13.27.4.43.69.43.11 0 .22 0 .33-.08l2.76-1.28c.38-.18.56-.64.36-1.01L17.28 18l2.41-.45a.88.88 0 00.43-.26c.27-.32.23-.79-.12-1.08l-8.74-7.35-.01.01a.756.756 0 00-.49-.18M15 10V8h5v2h-5m-1.17-5.24l2.83-2.83 1.41 1.41-2.83 2.83-1.41-1.41M10 0h2v5h-2V0M3.93 14.66l2.83-2.83 1.41 1.41-2.83 2.83-1.41-1.41m0-11.32l1.41-1.41 2.83 2.83-1.41 1.41-2.83-2.83M7 10H2V8h5v2"/></svg></span> Click on a tile to change the accent
+color:</p>
+<style>
+  .md-typeset button[data-md-color-accent] > code {
+    background-color: var(--md-code-bg-color);
+    color: var(--md-accent-fg-color);
+  }
+</style>
+
+<div class="tx-switch">
+  <button data-md-color-accent="red"><code>red</code></button>
+  <button data-md-color-accent="pink"><code>pink</code></button>
+  <button data-md-color-accent="purple"><code>purple</code></button>
+  <button data-md-color-accent="deep-purple"><code>deep purple</code></button>
+  <button data-md-color-accent="indigo"><code>indigo</code></button>
+  <button data-md-color-accent="blue"><code>blue</code></button>
+  <button data-md-color-accent="light-blue"><code>light blue</code></button>
+  <button data-md-color-accent="cyan"><code>cyan</code></button>
+  <button data-md-color-accent="teal"><code>teal</code></button>
+  <button data-md-color-accent="green"><code>green</code></button>
+  <button data-md-color-accent="light-green"><code>light green</code></button>
+  <button data-md-color-accent="lime"><code>lime</code></button>
+  <button data-md-color-accent="yellow"><code>yellow</code></button>
+  <button data-md-color-accent="amber"><code>amber</code></button>
+  <button data-md-color-accent="orange"><code>orange</code></button>
+  <button data-md-color-accent="deep-orange"><code>deep orange</code></button>
+</div>
+
+<script>
+  var buttons = document.querySelectorAll("button[data-md-color-accent]")
+  buttons.forEach(function(button) {
+    button.addEventListener("click", function() {
+      var attr = this.getAttribute("data-md-color-accent")
+      document.body.setAttribute("data-md-color-accent", attr)
+      var name = document.querySelector("#__code_3 code span:nth-child(7)")
+      name.textContent = attr.replace("-", " ")
+    })
+  })
+</script>
+
+<h3 id="custom-css">custom css<a class="headerlink" href="#custom-css" title="Permanent link">&para;</a></h3>
 <h2 id="logo">Logo<a class="headerlink" href="#logo" title="Permanent link">&para;</a></h2>
+<p>The logo can be changed in the <code>mkdocs.yaml</code> file
+<strong>in mkdocs.yml</strong>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>  <span class="c1">#change logo here</span>
+<span class="hll">  <span class="nt">logo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">img/logo-white.svg</span>
+</span>  <span class="nt">favicon</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">img/favicon.png</span>
+</code></pre></div>
+</td></tr></table></p>
 <h2 id="additional-css-and-javascript">Additional CSS and Javascript<a class="headerlink" href="#additional-css-and-javascript" title="Permanent link">&para;</a></h2>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">CSS</label><div class="tabbed-content">
 <p>If you want to tweak some colors or change the spacing of certain elements, 
@@ -466,8 +753,7 @@ Then, add the following line to mkdocs.yml:</p>
 <p>The same is true for additional JavaScript. If you want to integrate 
 another syntax highlighter or add some custom logic to your theme, 
 create a new JavaScript file in the <code>docs/</code> directory:
-<div class="highlight"><pre><span></span><code>.
-├─ docs/
+<div class="highlight"><pre><span></span><code>├─ docs/
 │  └─ javascripts/
 │     └─ extra.js
 └─ mkdocs.yml
@@ -478,10 +764,45 @@ Then, add the following line to mkdocs.yml:</p>
 </code></pre></div>
 </div>
 </div>
-<p>Spin up the live preview server and start typing your changes in your additional stylesheet file – you should see them almost instantly after saving.</p>
+<h3 id="custom-colors">Custom colors<a class="headerlink" href="#custom-colors" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/main/_colors.scss"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 012-2h9.982a2 2 0 011.414.586l4.018 4.018A2 2 0 0121 7.018V21a2 2 0 01-2 2H4.75a.75.75 0 010-1.5H19a.5.5 0 00.5-.5V8.5h-4a2 2 0 01-2-2v-4H5a.5.5 0 00-.5.5v6.25a.75.75 0 01-1.5 0V3zm12-.5v4a.5.5 0 00.5.5h4a.5.5 0 00-.146-.336l-4.018-4.018A.5.5 0 0015 2.5z"/><path d="M4.53 12.24a.75.75 0 01-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 11-1.022 1.1l-3.23-3a.75.75 0 010-1.1l3.23-3a.75.75 0 011.06.04zm3.979 1.06a.75.75 0 111.02-1.1l3.231 3a.75.75 0 010 1.1l-3.23 3a.75.75 0 11-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> Source</a> ·
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.292 2.06a.75.75 0 00-.584 0L.458 6.81a.75.75 0 000 1.38L4.25 9.793v3.803a2.901 2.901 0 00-1.327.757c-.579.58-.923 1.41-.923 2.43v4.5c0 .248.128.486.335.624.06.04.117.073.22.124.124.062.297.138.52.213.448.149 1.09.288 1.925.288s1.477-.14 1.925-.288c.223-.075.396-.15.52-.213a2.11 2.11 0 00.21-.117A.762.762 0 008 21.28v-4.5c0-1.018-.344-1.85-.923-2.428a2.9 2.9 0 00-1.327-.758v-3.17l5.958 2.516a.75.75 0 00.584 0l5.208-2.2v4.003a2.552 2.552 0 01-.079.085 4.057 4.057 0 01-.849.65c-.826.488-2.255 1.021-4.572 1.021-.612 0-1.162-.037-1.654-.1a.75.75 0 00-.192 1.487c.56.072 1.173.113 1.846.113 2.558 0 4.254-.592 5.334-1.23.538-.316.914-.64 1.163-.896a2.84 2.84 0 00.392-.482h.001A.75.75 0 0019 15v-4.892l4.542-1.917a.75.75 0 000-1.382l-11.25-4.75zM5 15c-.377 0-.745.141-1.017.413-.265.265-.483.7-.483 1.368v4.022c.299.105.797.228 1.5.228s1.201-.123 1.5-.228V16.78c0-.669-.218-1.103-.483-1.368A1.431 1.431 0 005 15zm7-3.564L2.678 7.5 12 3.564 21.322 7.5 12 11.436z"/></svg></span> Difficulty: <em>easy</em></p>
+<p>Material for MkDocs implements colors using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS variables</a> (custom
+properties). If you want to customize the colors beyond the palette (e.g. to
+use your brand-specific colors), you can add an <a href="../customization.md#additional-css">additional stylesheet</a> and
+tweak the values of the CSS variables.</p>
+<p>Let's say you're <span class="twemoji" style="color: #EE0F0F"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></span>
+<strong>YouTube</strong>, and want to set the primary color to your brand's palette. Just
+add:</p>
+<div class="highlight"><pre><span></span><code><span class="p">:</span><span class="nd">root</span> <span class="p">{</span>
+  <span class="err">--</span><span class="n">md-primary-fg-color</span><span class="p">:</span>        <span class="mh">#EE0F0F</span><span class="p">;</span>
+  <span class="err">--</span><span class="n">md-primary-fg-color--light</span><span class="p">:</span> <span class="mh">#ECB7B7</span><span class="p">;</span>
+  <span class="err">--</span><span class="n">md-primary-fg-color--dark</span><span class="p">:</span>  <span class="mh">#90030C</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>See the file containing the <a href="https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/main/_colors.scss">color definitions</a> for a list of all CSS
+variables.</p>
+<h3 id="custom-color-schemes">Custom color schemes<a class="headerlink" href="#custom-color-schemes" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/palette/_scheme.scss"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M3 3a2 2 0 012-2h9.982a2 2 0 011.414.586l4.018 4.018A2 2 0 0121 7.018V21a2 2 0 01-2 2H4.75a.75.75 0 010-1.5H19a.5.5 0 00.5-.5V8.5h-4a2 2 0 01-2-2v-4H5a.5.5 0 00-.5.5v6.25a.75.75 0 01-1.5 0V3zm12-.5v4a.5.5 0 00.5.5h4a.5.5 0 00-.146-.336l-4.018-4.018A.5.5 0 0015 2.5z"/><path d="M4.53 12.24a.75.75 0 01-.039 1.06l-2.639 2.45 2.64 2.45a.75.75 0 11-1.022 1.1l-3.23-3a.75.75 0 010-1.1l3.23-3a.75.75 0 011.06.04zm3.979 1.06a.75.75 0 111.02-1.1l3.231 3a.75.75 0 010 1.1l-3.23 3a.75.75 0 11-1.021-1.1l2.639-2.45-2.64-2.45z"/></svg></span> Source</a> ·
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.292 2.06a.75.75 0 00-.584 0L.458 6.81a.75.75 0 000 1.38L4.25 9.793v3.803a2.901 2.901 0 00-1.327.757c-.579.58-.923 1.41-.923 2.43v4.5c0 .248.128.486.335.624.06.04.117.073.22.124.124.062.297.138.52.213.448.149 1.09.288 1.925.288s1.477-.14 1.925-.288c.223-.075.396-.15.52-.213a2.11 2.11 0 00.21-.117A.762.762 0 008 21.28v-4.5c0-1.018-.344-1.85-.923-2.428a2.9 2.9 0 00-1.327-.758v-3.17l5.958 2.516a.75.75 0 00.584 0l5.208-2.2v4.003a2.552 2.552 0 01-.079.085 4.057 4.057 0 01-.849.65c-.826.488-2.255 1.021-4.572 1.021-.612 0-1.162-.037-1.654-.1a.75.75 0 00-.192 1.487c.56.072 1.173.113 1.846.113 2.558 0 4.254-.592 5.334-1.23.538-.316.914-.64 1.163-.896a2.84 2.84 0 00.392-.482h.001A.75.75 0 0019 15v-4.892l4.542-1.917a.75.75 0 000-1.382l-11.25-4.75zM5 15c-.377 0-.745.141-1.017.413-.265.265-.483.7-.483 1.368v4.022c.299.105.797.228 1.5.228s1.201-.123 1.5-.228V16.78c0-.669-.218-1.103-.483-1.368A1.431 1.431 0 005 15zm7-3.564L2.678 7.5 12 3.564 21.322 7.5 12 11.436z"/></svg></span> Difficulty: <em>easy</em></p>
+<p>Besides overriding specific colors, you can create your own, named color scheme
+by wrapping the definitions in the <code class="highlight"><span class="o">[</span><span class="nt">data-md-color-scheme</span><span class="o">=</span><span class="s2">&quot;...&quot;</span><span class="o">]</span></code>
+<a href="https://www.w3.org/TR/selectors-4/#attribute-selectors">attribute selector</a>, which you can then set via <code>mkdocs.yml</code> as described
+in the [color schemes][7] section:</p>
+<div class="highlight"><pre><span></span><code><span class="o">[</span><span class="nt">data-md-color-scheme</span><span class="o">=</span><span class="s2">&quot;youtube&quot;</span><span class="o">]</span> <span class="p">{</span>
+  <span class="err">--</span><span class="n">md-primary-fg-color</span><span class="p">:</span>        <span class="mh">#EE0F0F</span><span class="p">;</span>
+  <span class="err">--</span><span class="n">md-primary-fg-color--light</span><span class="p">:</span> <span class="mh">#ECB7B7</span><span class="p">;</span>
+  <span class="err">--</span><span class="n">md-primary-fg-color--dark</span><span class="p">:</span>  <span class="mh">#90030C</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Additionally, the <code>slate</code> color scheme defines all of it's colors via <code>hsla</code>
+color functions and deduces its colors from the <code>--md-hue</code> CSS variable. You
+can tune the <code>slate</code> theme with:</p>
+<div class="highlight"><pre><span></span><code><span class="o">[</span><span class="nt">data-md-color-scheme</span><span class="o">=</span><span class="s2">&quot;slate&quot;</span><span class="o">]</span> <span class="p">{</span>
+  <span class="err">--</span><span class="n">md-hue</span><span class="p">:</span> <span class="mi">210</span><span class="p">;</span> <span class="c">/* [0, 360] */</span>
+<span class="p">}</span>
+</code></pre></div>
 <h2 id="styling-code-blocks">Styling code blocks<a class="headerlink" href="#styling-code-blocks" title="Permanent link">&para;</a></h2>
-<p>This project is licensed under the terms of the MIT license.</p>
-<p>Alternatively, if you're running Material for MkDocs from within Docker, use:</p>
 <div class="tabbed-set" data-tabs="2:8"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Python</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
@@ -756,8 +1077,8 @@ mimic <span class="nv">$ARG</span>
       
     </div>
     
-      <script src="../assets/javascripts/vendor.6a3d08fc.min.js"></script>
-      <script src="../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../assets/javascripts/bundle.b3a72adc.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
