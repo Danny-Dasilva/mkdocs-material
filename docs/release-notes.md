@@ -1,9 +1,6 @@
-0
-1
-2
-3
-4
-5
-{6}
-{666666}
-
+Version 1.0 initial release
+Features:
+Custom js and css theming
+Toggle dark mode
+Custom code highlight colors
+Built in plugins
