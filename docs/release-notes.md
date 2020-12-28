@@ -1,4 +1,4 @@
-Version 1.0 initial release
+### Version 1.0 `initial release`
 Features:
 Custom js and css theming
 Toggle dark mode
